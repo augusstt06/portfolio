@@ -10,7 +10,8 @@
     "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
     "check-conflict-formatting-rules": "eslint-config-prettier './src/**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -34,7 +35,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^9.0.11",
+    "husky": "^8.0.0",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "^3.2.5",
