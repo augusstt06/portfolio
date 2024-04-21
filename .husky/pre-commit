@@ -3,18 +3,11 @@
 
 pnpm lint-staged
 
-echo "===================================="
-
 if [ $? -eq 0 ]; then
-echo ""
-  echo "🐳 The commit completed successfully! Please push changes to the repository."
+  echo "========================================================================"
   echo ""
+  echo "🐳 The commit completed successfully! Please push changes to the repository. 🐳"
+  echo ""
+  echo "========================================================================"
 fi
 
-if [ $? -ne 0 ]; then
-  echo "" 
-  echo "❌ Please check the error message above and make necessary corrections."
-  echo ""
-fi
-
-echo "===================================="
