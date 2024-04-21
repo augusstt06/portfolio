@@ -1,4 +1,13 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-pnpm run lint:fix
+pnpm lint-staged
+
+if [ $? -eq 0 ]; then
+  echo "========================================================================"
+  echo ""
+  echo "🐳 The commit completed successfully! Please push changes to the repository. 🐳"
+  echo ""
+  echo "========================================================================"
+fi
+

@@ -6,11 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
-    "prettier:fix": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-    "check-conflict-formatting-rules": "eslint-config-prettier './src/**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky install",
+    "lint": "eslint --cache .",
+    "format": "prettier --cache --write .",
+    "prepare": "husky",
     "postinstall": "husky install"
   },
   "dependencies": {
@@ -20,22 +18,23 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^7.0.2",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "14.1.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.33.2",
-    "husky": "^8.0.0",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "^3.2.5",
@@ -44,9 +43,9 @@
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [
-      "pnpm run check-conflict-formatting-rules",
-      "pnpm run prettier:fix",
-      "pnpm run lint:fix"
+      "prettier --cache --write",
+      "eslint-config-prettier './src/**/*.{js,jsx,ts,tsx}'",
+      "eslint --cache --fix --max-warnings=0"
     ]
   },
   "eslintIgnore": [
