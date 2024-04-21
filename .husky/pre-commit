@@ -2,3 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 pnpm lint-staged
+
+if [ $? -eq 0 ]; then
+  echo "🐳 The commit completed successfully! Please push changes to the repository."
+fi
