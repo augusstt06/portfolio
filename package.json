@@ -6,10 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
-    "prettier:fix": "prettier --write './src/**/*.{js,jsx,ts,tsx}'",
-    "check-conflict-formatting-rules": "eslint-config-prettier './src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint --cache .",
+    "format": "prettier --cache --write .",
     "prepare": "husky",
     "postinstall": "husky install"
   },
@@ -45,9 +43,9 @@
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [
-      "pnpm run check-conflict-formatting-rules",
-      "pnpm run prettier:fix",
-      "pnpm run lint:fix"
+      "prettier --cache --write",
+      "eslint-config-prettier './src/**/*.{js,jsx,ts,tsx}'",
+      "eslint --cache --fix --max-warnings=0"
     ]
   },
   "eslintIgnore": [
