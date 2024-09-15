@@ -52,5 +52,6 @@
     "next-env.d.ts",
     "next.config.js",
     "postcss.config.js"
-  ]
+  ],
+  "packageManager": "yarn@4.5.0"
 }
