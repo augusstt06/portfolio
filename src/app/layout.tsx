@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { ThemeProvider } from 'next-themes'
+import './globals.css'
 
 export default function RootLayout({
   children,
