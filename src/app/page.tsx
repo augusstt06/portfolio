@@ -1,7 +1,7 @@
 'use client'
 
 import 'tailwindcss/tailwind.css'
-import Text from './components/organisms/Text'
+import Text from '../components/organisms/Text'
 
 const Home: React.FC = () => {
   return (
