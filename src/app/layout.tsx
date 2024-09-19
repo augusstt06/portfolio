@@ -1,7 +1,10 @@
 'use client'
 
 import { ThemeProvider } from 'next-themes'
+
 import './globals.css'
+
+import Nav from '@/components/organisms/Nav'
 
 export default function RootLayout({
   children,
@@ -11,7 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class">
+          <Nav />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -2,7 +2,12 @@ import { useEffect, useRef } from 'react'
 
 import gsap from 'gsap'
 
-export default function Text() {
+import { INTRODUCE } from '@/constant'
+
+import { useStepStore } from '@/app/store'
+
+export default function MainText() {
+  const { setStep } = useStepStore()
   const blockquoteRef = useRef<HTMLQuoteElement>(null)
   const noteRef = useRef<HTMLParagraphElement>(null)
 
@@ -24,8 +29,6 @@ export default function Text() {
 
     const tl = gsap.timeline({
       delay: 0.5,
-      repeatDelay: 0.5,
-      repeat: -1,
     })
 
     tl.addLabel('enter')
@@ -61,7 +64,6 @@ export default function Text() {
     tl.addPause()
     tl.addLabel('exit')
 
-    // Animation for fading out and moving up the text
     tl.to(noteRef.current, 0.5, { opacity: 0, ease: 'Linear.easeNone' })
 
     if (h1) {
@@ -83,7 +85,11 @@ export default function Text() {
     }
 
     noteRef.current.addEventListener('click', () => {
+      // reverse는 되감기라 아래로 떨어짐
       tl.play()
+      setTimeout(() => {
+        setStep(INTRODUCE)
+      }, 1000)
     })
 
     return () => {
