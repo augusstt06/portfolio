@@ -84,12 +84,13 @@ export default function MainText() {
       )
     }
 
+    tl.to(noteRef.current, { duration: 0.4, y: 100 })
+
     noteRef.current.addEventListener('click', () => {
       // reverse는 되감기라 아래로 떨어짐
-      tl.play()
-      setTimeout(() => {
+      void tl.play().then(() => {
         setStep(INTRODUCE)
-      }, 1000)
+      })
     })
 
     return () => {
@@ -113,7 +114,7 @@ export default function MainText() {
         className="group text-center text-white text-lg opacity-0 mt-4 cursor-pointer hover:text-[#9DF3c4] simple-transition relative px-6 py-2"
       >
         Click to continue Viewing the Portfolio
-        <span className="absolute inset-0 border-2 border-[#9DF3c4] transition-all duration-700 transform scale-x-0 origin-left group-hover:scale-x-100 pointer-events-none z-[-1]"></span>
+        <span className="absolute inset-0 border-2 border-[#9DF3c4] transition-all duration-700 transform scale-x-0 origin-left group-hover:scale-x-100 pointer-events-none z-[-1] rounded-xl" />
       </p>
     </article>
   )

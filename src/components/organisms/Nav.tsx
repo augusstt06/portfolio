@@ -18,14 +18,16 @@ export default function Nav() {
     setStep(menu)
   }
 
+  const isButtonDisabled = step === MAIN
   return (
     <nav
       className={`fixed w-full h-20 grid grid-cols-5 transition-opacity duration-1000 ease-in-out ${isRender ? 'opacity-100' : 'opacity-0'}`}
     >
       <section className="col-start-2 col-end-5 grid grid-cols-4 grid-center relative">
-        {menus.map((data, index) => (
+        {menus.map((data) => (
           <button
             key={data.title}
+            disabled={isButtonDisabled}
             onClick={() => {
               clickHandler(data.title)
             }}
