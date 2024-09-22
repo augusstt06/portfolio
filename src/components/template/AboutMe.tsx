@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 
 import { gsap } from 'gsap'
 
-export default function Introduce() {
+export default function AboutMe() {
   const textRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

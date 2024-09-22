@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 
 import gsap from 'gsap'
 
-import { INTRODUCE } from '@/constant'
+import { ABOUTME } from '@/constant'
 
 import { useStepStore } from '@/app/store'
 
@@ -89,7 +89,7 @@ export default function MainText() {
     subParagraphRef.current.addEventListener('click', () => {
       // reverse는 되감기라 아래로 떨어짐
       void tl.play().then(() => {
-        setStep(INTRODUCE)
+        setStep(ABOUTME)
       })
     })
 

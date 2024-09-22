@@ -1,5 +1,5 @@
 'use client'
-import { MAIN } from '@/constant'
+import { ABOUTME, EXPERIENCE, MAIN, SKILLS } from '@/constant'
 
 import { useStepStore } from '@/app/store'
 
@@ -8,10 +8,10 @@ export default function Nav() {
 
   const isRender = step !== MAIN
   const menus = [
-    { title: 'Main' },
-    { title: 'Introduce' },
-    { title: 'Skills' },
-    { title: 'Experiences' },
+    { title: MAIN },
+    { title: ABOUTME },
+    { title: SKILLS },
+    { title: EXPERIENCE },
   ]
 
   const clickHandler = (menu: string) => {
