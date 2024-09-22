@@ -16,6 +16,15 @@ const config: Config = {
       fontFamily: {
         custom: ['Unbounded'],
       },
+      animation: {
+        blink: 'blink 2s step-end infinite',
+      },
+      keyframes: {
+        blink: {
+          '0%, 50%, 100%': { opacity: '1' },
+          '25%, 75%': { opacity: '0' },
+        },
+      },
     },
   },
   plugins: [],

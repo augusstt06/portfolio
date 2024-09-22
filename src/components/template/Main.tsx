@@ -1,9 +1,9 @@
-import MainText from '../molecules/animate/MainText'
+import DropDownText from '../molecules/animate/DropDownText'
 
 export default function Main() {
   return (
     <section>
-      <MainText />
+      <DropDownText />
     </section>
   )
 }

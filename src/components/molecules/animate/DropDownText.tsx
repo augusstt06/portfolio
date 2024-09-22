@@ -6,7 +6,7 @@ import { ABOUTME } from '@/constant'
 
 import { useStepStore } from '@/app/store'
 
-export default function MainText() {
+export default function DropDownText() {
   const { setStep } = useStepStore()
   const headParagraphRef = useRef<HTMLParagraphElement>(null)
   const subParagraphRef = useRef<HTMLParagraphElement>(null)
@@ -101,12 +101,12 @@ export default function MainText() {
   }, [])
 
   return (
-    <article className="col-flex justify-center abs-center space-y-5">
+    <article className="col-flex abs-center justify-center space-y-5">
       <div
         ref={headParagraphRef}
         className="cursor-pointer text-3xl max-w-2xl mx-auto leading-tight text-center text-[#9DF3C4]"
       >
-        <h1 className="text-5xl mb-6">Hi I&apos;m Chung Yeon Kim</h1>
+        <h1 className="mb-6 text-5xl">Hi I&apos;m Chung Yeon Kim</h1>
         <small className="text-4xl">FrontEnd Developer</small>
       </div>
       <p
