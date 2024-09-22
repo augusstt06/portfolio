@@ -1,14 +1,21 @@
-import { useEffect, useState } from 'react'
+import { type Dispatch, type SetStateAction, useEffect, useState } from 'react'
 
 type Props = {
   text: string
+  setIsTopSectionEnd: Dispatch<SetStateAction<boolean>>
   breakAfter?: string
   highlightWord?: string
   highlightClass?: string
 }
 
 export default function TypingText(props: Props) {
-  const { text, breakAfter, highlightWord, highlightClass } = props
+  const {
+    text,
+    breakAfter,
+    highlightWord,
+    highlightClass,
+    setIsTopSectionEnd,
+  } = props
   const [mainText, setMainText] = useState('')
   const [count, setCount] = useState<number>(0)
 
@@ -24,8 +31,10 @@ export default function TypingText(props: Props) {
       return () => {
         clearTimeout(timeout)
       }
+    } else {
+      setIsTopSectionEnd(true)
     }
-  }, [text, count])
+  }, [text, count, setIsTopSectionEnd])
 
   const renderText = () => {
     if (!breakAfter) {
@@ -93,7 +102,7 @@ export default function TypingText(props: Props) {
       <div className="invisible">{text}</div>
       <div className="absolute top-0 left-0">
         {renderText()}
-        <span className="animate-blink inline-block bg-current w-[0.5rem] h-[2.5rem] align-middle"></span>
+        <span className="ml-3 animate-blink inline-block bg-current w-[0.5rem] h-[2.5rem] align-middle"></span>
       </div>
     </div>
   )

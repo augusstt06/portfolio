@@ -14,7 +14,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        custom: ['Unbounded'],
+        custom: ['Unbounded', 'Jua-Regular'],
       },
       animation: {
         blink: 'blink 2s step-end infinite',

@@ -9,12 +9,20 @@
 
   font-weight: 900;
 }
+@font-face {
+  font-family: 'Jua-Regular';
+  src: url('../../public/fonts/Jua-Regular.ttf') format('truetype');
+  font-weight: 900;
+}
 @layer base {
   body {
     font-family: 'Unbounded';
   }
 }
 @layer utilities {
+  .korean-font {
+    font-family: 'Jua-Regular';
+  }
   .grid-center {
     @apply place-content-center place-items-center;
   }
@@ -27,5 +35,8 @@
   }
   .col-flex {
     @apply flex flex-col items-center;
+  }
+  .row-flex {
+    @apply flex flex-row items-center;
   }
 }
