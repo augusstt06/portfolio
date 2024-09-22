@@ -8,14 +8,14 @@ import { useStepStore } from '@/app/store'
 
 export default function MainText() {
   const { setStep } = useStepStore()
-  const blockquoteRef = useRef<HTMLQuoteElement>(null)
-  const noteRef = useRef<HTMLParagraphElement>(null)
+  const headParagraphRef = useRef<HTMLParagraphElement>(null)
+  const subParagraphRef = useRef<HTMLParagraphElement>(null)
 
   useEffect(() => {
-    if (!blockquoteRef.current || !noteRef.current) return
+    if (!headParagraphRef.current || !subParagraphRef.current) return
 
-    const h1 = blockquoteRef.current.querySelector('h1')
-    const small = blockquoteRef.current.querySelector('small')
+    const h1 = headParagraphRef.current.querySelector('h1')
+    const small = headParagraphRef.current.querySelector('small')
 
     if (h1) {
       const h1Text = h1.innerText
@@ -55,7 +55,7 @@ export default function MainText() {
     }
 
     tl.fromTo(
-      noteRef.current,
+      subParagraphRef.current,
       1,
       { opacity: 0 },
       { opacity: 0.6, ease: 'Linear.easeNone' },
@@ -64,7 +64,7 @@ export default function MainText() {
     tl.addPause()
     tl.addLabel('exit')
 
-    tl.to(noteRef.current, 0.5, { opacity: 0, ease: 'Linear.easeNone' })
+    tl.to(subParagraphRef.current, 0.5, { opacity: 0, ease: 'Linear.easeNone' })
 
     if (h1) {
       tl.to(
@@ -84,9 +84,9 @@ export default function MainText() {
       )
     }
 
-    tl.to(noteRef.current, { duration: 0.4, y: 100 })
+    tl.to(subParagraphRef.current, { duration: 0.4, y: 100 })
 
-    noteRef.current.addEventListener('click', () => {
+    subParagraphRef.current.addEventListener('click', () => {
       // reverse는 되감기라 아래로 떨어짐
       void tl.play().then(() => {
         setStep(INTRODUCE)
@@ -94,7 +94,7 @@ export default function MainText() {
     })
 
     return () => {
-      noteRef.current?.removeEventListener('click', () => {
+      subParagraphRef.current?.removeEventListener('click', () => {
         tl.play()
       })
     }
@@ -102,15 +102,15 @@ export default function MainText() {
 
   return (
     <article className="col-flex justify-center abs-center space-y-5">
-      <blockquote
-        ref={blockquoteRef}
+      <div
+        ref={headParagraphRef}
         className="cursor-pointer text-3xl max-w-2xl mx-auto leading-tight text-center text-[#9DF3C4]"
       >
         <h1 className="text-5xl mb-6">Hi I&apos;m Chung Yeon Kim</h1>
         <small className="text-4xl">FrontEnd Developer</small>
-      </blockquote>
+      </div>
       <p
-        ref={noteRef}
+        ref={subParagraphRef}
         className="group text-center text-white text-lg opacity-0 mt-4 cursor-pointer hover:text-[#9DF3c4] simple-transition relative px-6 py-2"
       >
         Click to continue Viewing the Portfolio

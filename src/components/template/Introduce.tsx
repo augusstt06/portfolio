@@ -17,7 +17,7 @@ export default function Introduce() {
   return (
     <section className="h-screen pt-20">
       <div ref={textRef} className="text-2xl font-bold">
-        안녕하세요 김충연입니다
+        하이용 스타벅스 시원하다.
       </div>
     </section>
   )
