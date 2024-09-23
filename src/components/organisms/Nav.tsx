@@ -1,5 +1,5 @@
 'use client'
-import { ABOUTME, EXPERIENCE, MAIN, SKILLS } from '@/constant'
+import { ABOUTME, CONTACT, EXPERIENCE, MAIN } from '@/constant'
 
 import { useStepStore } from '@/app/store'
 
@@ -10,8 +10,8 @@ export default function Nav() {
   const menus = [
     { title: MAIN },
     { title: ABOUTME },
-    { title: SKILLS },
     { title: EXPERIENCE },
+    { title: CONTACT },
   ]
 
   const clickHandler = (menu: string) => {
@@ -23,7 +23,7 @@ export default function Nav() {
     <nav
       className={`fixed w-full h-20 grid grid-cols-5 transition-opacity duration-1000 ease-in-out ${isRender ? 'opacity-100' : 'opacity-0'}`}
     >
-      <section className="relative col-start-2 col-end-5 grid grid-cols-4 grid-center">
+      <section className="grid-center relative grid grid-cols-4 col-start-2 col-end-5">
         {menus.map((data) => (
           <button
             key={data.title}
