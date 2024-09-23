@@ -3,10 +3,10 @@
 import 'tailwindcss/tailwind.css'
 import { useEffect } from 'react'
 
-import { ABOUTME, MAIN } from '@/constant'
+import { MAIN } from '@/constant'
 
 import { useStepStore } from '@/app/store'
-import AboutMe from '@/components/template/AboutMe'
+import Introduce from '@/components/page/Introduce'
 import Main from '@/components/template/Main'
 
 const Home: React.FC = () => {
@@ -15,10 +15,9 @@ const Home: React.FC = () => {
     switch (step) {
       case MAIN:
         return <Main />
-      case ABOUTME:
-        return <AboutMe />
+
       default:
-        return <div>Error</div>
+        return <Introduce />
     }
   }
   useEffect(() => {
