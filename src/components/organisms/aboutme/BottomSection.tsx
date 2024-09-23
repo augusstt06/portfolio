@@ -8,9 +8,11 @@ export default function BottomSection(props: Props) {
   const { isTopSectionEnd } = props
 
   return (
-    <article className="relative grid grid-cols-3 row-span-2">
+    <article
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative grid grid-cols-3 row-span-2 simple-transition`}
+    >
       <Skills />
-      <Introduce isTopSectionEnd={isTopSectionEnd} />
+      <Introduce />
     </article>
   )
 }

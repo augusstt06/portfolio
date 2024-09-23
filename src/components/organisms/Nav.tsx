@@ -23,7 +23,7 @@ export default function Nav() {
     <nav
       className={`fixed w-full h-20 grid grid-cols-5 transition-opacity duration-1000 ease-in-out ${isRender ? 'opacity-100' : 'opacity-0'}`}
     >
-      <section className="grid-center relative grid grid-cols-4 col-start-2 col-end-5">
+      <section className="relative grid-center grid grid-cols-4 col-start-2 col-end-5">
         {menus.map((data) => (
           <button
             key={data.title}

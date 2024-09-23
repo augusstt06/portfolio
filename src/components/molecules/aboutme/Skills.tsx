@@ -6,7 +6,7 @@ export default function Skills() {
       title: 'Typescript',
       icon: <SiTypescript className="text-[#3178C6] w-6 h-6" />,
       text: (
-        <div className="text-md korean-font space-y-3 text-left">
+        <div className="text-left text-md korean-font space-y-3">
           <p>
             <span className="text-[#9DF3c4]">유틸리티 타입</span>을 활용한{' '}
             <span className="text-[#9DF3c4]">타입 추론/단언</span>을 사용해 코드
@@ -25,7 +25,7 @@ export default function Skills() {
       title: 'React',
       icon: <SiReact className="text-[#61DAFB] w-6 h-6" />,
       text: (
-        <div className="text-md korean-font space-y-3 overflow-auto text-left">
+        <div className="overflow-auto text-left text-md korean-font space-y-3">
           <p>
             <span className="text-[#9DF3c4]">Atomic 디자인 패턴</span>과{' '}
             <span className="text-[#9DF3c4]">React Hook</span>을 사용한 컴포넌트
@@ -45,7 +45,7 @@ export default function Skills() {
       title: 'Next.js',
       icon: <SiNextdotjs className="w-6 h-6" />,
       text: (
-        <div className="text-md korean-font space-y-3 overflow-auto text-left">
+        <div className="overflow-auto text-left text-md korean-font space-y-3">
           <p>
             <span className="text-[#9DF3c4]">SSR / CSR </span>을 적재적소에
             활용하여 어플리케이션을 개발할수 있습니다.
@@ -62,7 +62,7 @@ export default function Skills() {
   ]
   return (
     <article className="relative col-span-1">
-      <div className="top-8 left-20 absolute space-y-5">
+      <div className="absolute top-8 left-20 space-y-5">
         {/* <h1 className="text-2xl">Mainly Use</h1> */}
         {badges.map((data) => (
           <div
@@ -71,7 +71,7 @@ export default function Skills() {
           >
             <div className="col-span-1">{data.icon}</div>
             <div className=" col-span-3">{data.title}</div>
-            <div className="group-hover:block hidden col-span-4 p-3">
+            <div className="hidden p-3 group-hover:block col-span-4">
               {data.text}
             </div>
           </div>

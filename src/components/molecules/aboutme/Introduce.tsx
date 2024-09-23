@@ -1,8 +1,4 @@
-type Props = {
-  isTopSectionEnd: boolean
-}
-export default function Introduce(props: Props) {
-  const { isTopSectionEnd } = props
+export default function Introduce() {
   const paragraphs = [
     {
       content:
@@ -23,9 +19,7 @@ export default function Introduce(props: Props) {
   ]
 
   return (
-    <article
-      className={`${isTopSectionEnd ? '' : 'opacity-0'} bg-white bg-opacity-10 w-[48rem] rounded-lg p-3 absolute top-8 right-24 korean-font text-lg transition-all duration-[1.5s] ease-in-out space-y-2 col-span-2`}
-    >
+    <article className="bg-white bg-opacity-10 w-[48rem] rounded-lg p-3 absolute top-8 right-24 korean-font text-lg transition-all duration-[1.5s] ease-in-out space-y-2 col-span-2">
       {paragraphs.map((data) => (
         <p key={data.content}>{data.content}</p>
       ))}
