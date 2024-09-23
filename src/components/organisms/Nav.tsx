@@ -8,7 +8,7 @@ import { useStepStore } from '@/app/store'
 
 export default function Nav() {
   const { step, setStep } = useStepStore()
-  const [activeMenu, setActiveMenu] = useState(ABOUTME) // 현재 활성 메뉴 상태 추가
+  const [activeMenu, setActiveMenu] = useState(ABOUTME)
 
   const menus = [
     { title: MAIN },
@@ -24,12 +24,13 @@ export default function Nav() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveMenu(entry.target.id) // 현재 활성 메뉴 업데이트
+            setActiveMenu(entry.target.id)
           }
         })
       },
+      // 50%가 보일 때 트리거
       { threshold: 0.5 },
-    ) // 50%가 보일 때 트리거
+    )
 
     sections.forEach((section) => {
       if (section) observer.observe(section)

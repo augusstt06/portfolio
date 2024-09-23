@@ -11,7 +11,7 @@ export default function BottomSection(props: Props) {
 
   return (
     <article
-      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative lg:grid lg:grid-cols-3 row-span-2 simple-transition mt-5 lg:mt-0 space-y-5 lg:space-y-0`}
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative lg:grid lg:grid-cols-3 row-span-2 simple-transition mt-5 lg:mt-0 space-y-3 lg:space-y-0`}
     >
       <Skills />
       <Introduce />

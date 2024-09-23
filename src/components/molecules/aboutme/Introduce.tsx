@@ -35,8 +35,8 @@ export default function Introduce() {
   ]
 
   return (
-    <article className="h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 korean-font text-xl xl:text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative">
-      <div className="xl:top-16 md:top-12 md:left-20 xl:left-24 xxl:left-[25rem] left-12 top-12 absolute text-left">
+    <article className="h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 korean-font text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative">
+      <div className="xl:top-16 md:top-12 md:left-20 lg:left-4 xl:left-24 xxl:left-[25rem] left-12 top-12 absolute text-left">
         {paragraphs.map((data) => (
           <div key={data.key}>{data.content}</div>
         ))}

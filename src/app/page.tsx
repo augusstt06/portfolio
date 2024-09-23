@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { MAIN } from '@/constant'
 
 import { useStepStore } from '@/app/store'
-import Introduce from '@/components/page/Introduce'
+import Portfoilo from '@/components/page/Portfolio'
 import Main from '@/components/template/Main'
 
 const Home: React.FC = () => {
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         return <Main />
 
       default:
-        return <Introduce />
+        return <Portfoilo />
     }
   }
   useEffect(() => {

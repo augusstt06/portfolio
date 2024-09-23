@@ -22,7 +22,7 @@ export default function DownArrow() {
 
   return (
     <div
-      className={`col-flex bottom-10 left-1/2 absolute -translate-x-1/2 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`col-flex bottom-5 left-1/2 absolute -translate-x-1/2 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <p>Scroll Down</p>
       <FaChevronDown className="w-8 h-8 text-[#9DF3c4]" />

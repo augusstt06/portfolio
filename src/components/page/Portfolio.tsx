@@ -6,7 +6,7 @@ import Experience from '../template/Experience'
 
 import AboutMe from '@/components/template/AboutMe'
 
-export default function Introduce() {
+export default function Portfoilo() {
   return (
     <section>
       <Element name={ABOUTME}>
