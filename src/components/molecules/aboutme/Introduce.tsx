@@ -1,28 +1,48 @@
 export default function Introduce() {
   const paragraphs = [
     {
-      content:
-        '안녕하세요 끊임없이 성장을 추구하는 프론트엔드 개발자 김충연입니다 .',
+      key: 'head',
+      content: (
+        <div>
+          <p>
+            안녕하세요 끊임없이{' '}
+            <span className="text-[#9DF3c4] text-3xl">성장</span>을 추구하는
+            프론트엔드 개발자 김충연입니다 .
+          </p>
+        </div>
+      ),
     },
     {
-      content:
-        '2020년부터 프론트엔드 개발자를 목표로 개인 공부 및 프로젝트를 진행해왔습니다.',
+      key: 'subHead',
+      content: (
+        <div>
+          2020년부터 프론트엔드 개발자를 목표로 개인 공부 및 프로젝트를 꾸준히
+          진행하고 있습니다.
+        </div>
+      ),
     },
     {
-      content:
-        '주로 Typescript, React, Next js를 사용해 프로젝트를 진행하고 있습니다.',
-    },
-    {
-      content:
-        '진행간 기능 완성에서 나아가 재사용/유지보수 개선을 위한 아토믹 패턴 적용, 렌더링 최적화를 위한 메모이제이션 사용 등, 코드 품질 향상을 위해 지속적으로 코드를 리뷰하며 개선점을 찾아 적용하고 있습니다.',
+      key: 'description',
+      content: (
+        <div>
+          기능완성에서 나아가 재사용/유지보수 개선, 코드 품질 향상을 위해
+          지속적으로 코드를 리뷰하며 <br />
+          <span className="text-[#9DF3c4] text-3xl">
+            어제보다 오늘 더 발전한 코드
+          </span>
+          를 작성하기 위해 노력하고 있습니다 .
+        </div>
+      ),
     },
   ]
 
   return (
-    <article className="bg-white bg-opacity-10 w-[48rem] rounded-lg p-3 absolute top-8 right-24 korean-font text-lg transition-all duration-[1.5s] ease-in-out space-y-2 col-span-2">
-      {paragraphs.map((data) => (
-        <p key={data.content}>{data.content}</p>
-      ))}
+    <article className="h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 korean-font text-xl xl:text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative">
+      <div className="xl:top-16 md:top-12 md:left-20 xl:left-24 xxl:left-[25rem] left-12 top-12 absolute text-left">
+        {paragraphs.map((data) => (
+          <div key={data.key}>{data.content}</div>
+        ))}
+      </div>
     </article>
   )
 }

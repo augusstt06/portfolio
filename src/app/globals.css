@@ -17,6 +17,7 @@
 @layer base {
   body {
     font-family: 'Unbounded';
+    background-color: #352f44;
   }
 }
 @layer utilities {

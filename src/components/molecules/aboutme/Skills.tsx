@@ -6,14 +6,14 @@ export default function Skills() {
       title: 'Typescript',
       icon: <SiTypescript className="text-[#3178C6] w-6 h-6" />,
       text: (
-        <div className="text-left text-md korean-font space-y-3">
+        <div className="text-md korean-font space-y-3 text-left">
           <p>
             <span className="text-[#9DF3c4]">유틸리티 타입</span>을 활용한{' '}
             <span className="text-[#9DF3c4]">타입 추론/단언</span>을 사용해 코드
             안정성을 높히는데 익숙합니다.
           </p>
           <p>
-            특히, 유지보수/재사용성 향상을 위해
+            특히, 유지보수/재사용성 향상을 위해{' '}
             <span className="text-[#9DF3c4]">Generic</span>과{' '}
             <span className="text-[#9DF3c4]">Type Alias</span>를 사용해 비즈니스
             로직을 모듈화하는 방법을 항상 고민하고 있습니다.
@@ -25,7 +25,7 @@ export default function Skills() {
       title: 'React',
       icon: <SiReact className="text-[#61DAFB] w-6 h-6" />,
       text: (
-        <div className="overflow-auto text-left text-md korean-font space-y-3">
+        <div className="text-md korean-font space-y-3 text-left">
           <p>
             <span className="text-[#9DF3c4]">Atomic 디자인 패턴</span>과{' '}
             <span className="text-[#9DF3c4]">React Hook</span>을 사용한 컴포넌트
@@ -45,7 +45,7 @@ export default function Skills() {
       title: 'Next.js',
       icon: <SiNextdotjs className="w-6 h-6" />,
       text: (
-        <div className="overflow-auto text-left text-md korean-font space-y-3">
+        <div className="text-md korean-font space-y-3 text-left">
           <p>
             <span className="text-[#9DF3c4]">SSR / CSR </span>을 적재적소에
             활용하여 어플리케이션을 개발할수 있습니다.
@@ -60,18 +60,19 @@ export default function Skills() {
       ),
     },
   ]
+
   return (
-    <article className="relative col-span-1">
-      <div className="absolute top-8 left-20 space-y-5">
-        {/* <h1 className="text-2xl">Mainly Use</h1> */}
+    <article className="lg:col-span-1 relative h-auto row-span-1">
+      {/* <div className="lg:inline lg:top-12 lg:left-20 xl:left-20 absolute flex flex-row items-center justify-around space-y-5"> */}
+      <div className="item-start lg:absolute lg:top-12 lg:left-24 xl:left-40 xxl:left-[30rem] lg:inline lg:space-y-5 flex flex-row justify-around">
         {badges.map((data) => (
           <div
-            className={`group hover:h-56 hover:w-80 hover:border-[#9DF3c4] simple-transition grid w-48 h-12 grid-cols-4 px-4 py-2 text-center border-2 rounded-lg cursor-pointer`}
+            className={`group hover:h-72 hover:w-80 xl:hover:w-[23rem] hover:border-[#9DF3c4] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 rounded-lg cursor-pointer`}
             key={data.title}
           >
             <div className="col-span-1">{data.icon}</div>
-            <div className=" col-span-3">{data.title}</div>
-            <div className="hidden p-3 group-hover:block col-span-4">
+            <div className="col-span-3">{data.title}</div>
+            <div className="group-hover:block hidden col-span-4 p-3">
               {data.text}
             </div>
           </div>
