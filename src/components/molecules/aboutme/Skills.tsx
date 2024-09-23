@@ -67,7 +67,7 @@ export default function Skills() {
       <div className="item-start lg:absolute lg:top-12 lg:left-24 xl:left-40 xxl:left-[30rem] lg:inline lg:space-y-5 flex flex-row justify-around">
         {badges.map((data) => (
           <div
-            className={`group hover:h-72 hover:w-80 xl:hover:w-[23rem] hover:border-[#9DF3c4] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 rounded-lg cursor-pointer`}
+            className={`group hover:h-[15rem] hover:w-80 xl:hover:w-[23rem] hover:border-[#9DF3c4] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 rounded-lg cursor-pointer`}
             key={data.title}
           >
             <div className="col-span-1">{data.icon}</div>
