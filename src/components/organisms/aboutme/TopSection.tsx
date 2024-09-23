@@ -8,8 +8,8 @@ type Props = {
 export default function TopSection(props: Props) {
   const { setIsTopSectionEnd } = props
   return (
-    <article className="relative row-span-1 text-2xl font-bold">
-      <div className="top-1/3 left-20 absolute space-y-5 text-5xl">
+    <article className="relative text-2xl font-bold row-span-1">
+      <div className="absolute text-5xl top-1/3 md:left-20 space-y-5 left-8">
         <TypingText
           setIsTopSectionEnd={setIsTopSectionEnd}
           text="A Steadily growing Developer ."

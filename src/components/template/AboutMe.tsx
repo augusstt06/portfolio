@@ -7,7 +7,7 @@ export default function AboutMe() {
   const [isTopSectionEnd, setIsTopSectionEnd] = useState<boolean>(false)
 
   return (
-    <section className="grid h-screen grid-rows-3 pt-20">
+    <section className="h-screen pt-20 grid grid-rows-3">
       <TopSection setIsTopSectionEnd={setIsTopSectionEnd} />
       <BottomSection isTopSectionEnd={isTopSectionEnd} />
     </section>
