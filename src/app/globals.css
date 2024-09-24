@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: #9df3c4;
+}
 @font-face {
   font-family: 'Unbounded';
   src: url('../../public/fonts/Unbounded-VariableFont_wght.ttf')

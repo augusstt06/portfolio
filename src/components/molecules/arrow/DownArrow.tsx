@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 
 import { FaChevronDown } from 'react-icons/fa'
 
-import { MAIN_COLOR_TEXT } from '@/constant'
-
 type Props = {
   next: string
   scrollY: number
@@ -31,10 +29,10 @@ export default function DownArrow(props: Props) {
   return (
     // <Link to={next} smooth={true} duration={600}>
     <div
-      className={`col-flex bottom-5 left-1/2 absolute -translate-x-1/2  ${isVisible ? 'opacity-100' : 'opacity-0'} cursor-pointer hover:text-[${MAIN_COLOR_TEXT}] hover:scale-110 simple-transition`}
+      className={`col-flex bottom-5 left-1/2 absolute -translate-x-1/2  ${isVisible ? 'opacity-100' : 'opacity-0'} cursor-pointer hover:text-[var(--main-color)] hover:scale-110 simple-transition`}
     >
       <p>Scroll Down</p>
-      <FaChevronDown className={`w-8 h-8 text-[${MAIN_COLOR_TEXT}]`} />
+      <FaChevronDown className={`w-8 h-8 text-[var(--main-color)]`} />
     </div>
     // </Link>
   )
