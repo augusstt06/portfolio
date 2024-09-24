@@ -63,7 +63,7 @@ export default function Introduce() {
         <div className="row-flex w-auto space-x-4 mt-4">
           {archivings.map((data) => (
             <Link href={data.url} key={data.title}>
-              <div className="border-2 w-24 place-content-center place-items-center grid grid-cols-3 rounded-lg px-1 hover:text-black simple-transition cursor-pointer hover:bg-white">
+              <div className="border-2 border-[#2e2e2e] w-24 place-content-center place-items-center grid grid-cols-3 rounded-lg px-1 hover:text-[#fff] simple-transition cursor-pointer hover:bg-[var(--main-color)]">
                 <div className="col-span-1">{data.icon}</div>
                 <p className="text-md col-span-2">{data.title}</p>
               </div>

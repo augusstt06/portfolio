@@ -46,7 +46,7 @@ export default function TopSection(props: Props) {
     <article className="relative text-2xl font-bold row-span-1">
       <h1
         ref={projectRef}
-        className="top-1/4 md:left-20 xl:left-40 xxl:left-[30rem] left-8 xl:text-6xl absolute text-5xl uppercase"
+        className="top-1/4 md:left-20 xl:left-40 xxl:left-[30rem] left-8 xl:text-6xl absolute text-5xl uppercase text-[#2e2e2e]"
       >
         Project
       </h1>

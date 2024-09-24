@@ -4,7 +4,8 @@ export default function Skills() {
   const badges = [
     {
       title: 'Typescript',
-      icon: <SiTypescript className="text-[#3178C6] w-6 h-6" />,
+      color: 'var(--ts-color)',
+      icon: <SiTypescript className="text-white w-6 h-6" />,
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
@@ -24,7 +25,8 @@ export default function Skills() {
     },
     {
       title: 'React',
-      icon: <SiReact className="text-[#61DAFB] w-6 h-6" />,
+      color: 'var(--react-color)',
+      icon: <SiReact className="text-white w-6 h-6" />,
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
@@ -46,18 +48,20 @@ export default function Skills() {
     },
     {
       title: 'Next.js',
-      icon: <SiNextdotjs className="w-6 h-6" />,
+      color: '#2e2e2e',
+      icon: <SiNextdotjs className="w-6 h-6 text-white" />,
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className={`text-[var(--main-color)]`}>SSR / CSR </span>을
-            적재적소에 활용하여 어플리케이션을 개발할수 있습니다.
+            <span className={`text-[var(--main-light-color)]`}>SSR / CSR </span>
+            을 적재적소에 활용하여 어플리케이션을 개발할수 있습니다.
           </p>
           <p>
             API 요청 로직 분리 / 일원화를 위해{' '}
-            <span className={`text-[var(--main-color)]`}>API Route</span> 를
-            활용한 <span className={`text-[var(--main-color)]`}>BFF 패턴</span>
-            을 적용해 개발하는것을 선호합니다.
+            <span className={`text-[var(--main-light-color)]`}>API Route</span>{' '}
+            를 활용한{' '}
+            <span className={`text-[var(--main-light-color)]`}>BFF 패턴</span>을
+            적용해 개발하는것을 선호합니다.
           </p>
         </div>
       ),
@@ -69,7 +73,7 @@ export default function Skills() {
       <div className="item-start lg:absolute lg:top-12 lg:left-24 xl:left-40 xxl:left-[30rem] lg:inline lg:space-y-16 flex flex-row justify-around">
         {badges.map((data) => (
           <div
-            className={`group hover:h-[17rem] xl:hover:h-[15rem] hover:w-80 xl:hover:w-[23rem] hover:border-[var(--main-color)] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 rounded-lg cursor-pointer`}
+            className={`bg-[${data.color}] text-[#fff] group hover:h-[17rem] xl:hover:h-[15rem] hover:w-80 xl:hover:w-[23rem] hover:border-[var(--main-color)] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 border-[#2e2e2e] rounded-lg cursor-pointer`}
             key={data.title}
           >
             <div className="col-span-1">{data.icon}</div>

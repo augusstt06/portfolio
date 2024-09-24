@@ -1,9 +1,14 @@
+/* FIXME: 글씨색감 조정하기 */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --main-color: #2e2e2e;
+  --main-color: #0b3f63;
+  --main-light-color: #194d71;
+  --ts-color: #3178c6;
+  --react-color: #61dafb;
 }
 @font-face {
   font-family: 'Unbounded';
