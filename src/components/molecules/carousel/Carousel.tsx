@@ -1,4 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {
+  type Dispatch,
+  type SetStateAction,
+  useEffect,
+  useRef,
+} from 'react'
 
 export type Card = {
   url: string
@@ -9,12 +14,13 @@ export type Card = {
 
 type Props = {
   cards: Card[]
+  currentIndex: number
+  setCurrentIndex: Dispatch<SetStateAction<number>>
 }
 
 export function Carousel(props: Props) {
-  const { cards } = props
+  const { cards, currentIndex, setCurrentIndex } = props
 
-  const [currentIndex, setCurrentIndex] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
 
   const next = () => {
@@ -55,14 +61,6 @@ export function Carousel(props: Props) {
     }
   }, [currentIndex])
 
-  const clickHandler = (index: number) => {
-    if (index === (currentIndex + 1) % cards.length) {
-      next()
-    } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
-      prev()
-    }
-  }
-
   return (
     <div className="w-2/3 md:w-[70rem] h-[32rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
       <div
@@ -72,38 +70,48 @@ export function Carousel(props: Props) {
           transformStyle: 'preserve-3d',
         }}
       >
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="card h-5/6 left-20 absolute w-4/5 transition-all duration-700"
-            style={{
-              transformStyle: 'preserve-3d',
-              zIndex: cards.length - index,
-            }}
-            onClick={() => {
-              clickHandler(index)
-            }}
-          >
-            <div className=" bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[#9DF3c4] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font">
-              <div className="md:col-span-1 row-span-1">
-                <img
-                  src={card.url}
-                  className="object-cover w-full h-full"
-                  alt={card.url}
-                />
-              </div>
-              <div className="md:col-span-1 md:grid-rows-5 grid grid-rows-4 row-span-2">
-                <div className="place-content-center row-span-1 text-center">
-                  {card.title}
-                  {card.subTitle}
+        {cards.map((card, index) => {
+          const isActive = index === currentIndex
+          const isNext = index === (currentIndex + 1) % cards.length
+          const isPrev =
+            index === (currentIndex - 1 + cards.length) % cards.length
+
+          return (
+            <div
+              key={index}
+              className={`card h-5/6 left-20 absolute w-4/5 transition-all duration-700 ${isActive ? '' : 'opacity-50'}`}
+              style={{
+                transformStyle: 'preserve-3d',
+                zIndex: cards.length - index,
+                pointerEvents: isActive || isNext || isPrev ? 'auto' : 'none', // Allow clicks only on active and adjacent cards
+              }}
+              onClick={() => {
+                if (isActive) return // Do nothing if the card is active
+                if (isNext) next()
+                if (isPrev) prev()
+              }}
+            >
+              <div className="bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[#9DF3c4] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font">
+                <div className="md:col-span-1 row-span-1">
+                  <img
+                    src={card.url}
+                    className="object-cover w-full h-full"
+                    alt={card.url}
+                  />
                 </div>
-                <div className="md:row-span-3 h-full row-span-4 pl-2 pr-2 overflow-y-scroll">
-                  {card.description}
+                <div className="md:col-span-1 md:grid-rows-5 grid grid-rows-4 row-span-2">
+                  <div className="place-content-center row-span-1 text-center">
+                    {card.title}
+                    {card.subTitle}
+                  </div>
+                  <div className="md:row-span-3 h-full row-span-4 pl-2 pr-2 overflow-y-scroll">
+                    {card.description}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

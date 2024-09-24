@@ -5,14 +5,15 @@ import { FaChevronDown } from 'react-icons/fa'
 
 type Props = {
   next: string
+  scrollY: number
 }
 export default function DownArrow(props: Props) {
-  // const { next } = props
+  const { scrollY } = props
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > scrollY) {
         setIsVisible(false)
       } else {
         setIsVisible(true)

@@ -17,7 +17,7 @@ export default function BottomSection(props: Props) {
     >
       <Skills />
       <Introduce />
-      <DownArrow next={PROJECT} />
+      <DownArrow next={PROJECT} scrollY={10} />
     </article>
   )
 }

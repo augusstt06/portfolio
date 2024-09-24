@@ -1,24 +1,39 @@
+import { useState } from 'react'
+
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { FaGithub } from 'react-icons/fa'
 
+import { CONTACT, GIT_PORTFOLIO, GIT_WEATHER } from '@/constant'
+
 import Badge from '@/components/atom/badge/Badge'
+import DownArrow from '@/components/molecules/arrow/DownArrow'
 import { Carousel } from '@/components/molecules/carousel/Carousel'
 
 export default function BottomSection() {
+  const router = useRouter()
+  const [currentIndex, setCurrentIndex] = useState(0)
   const cardsStacks = {
     megaEarn: ['React', 'Zustand', 'Tanstack-Query'],
     portfolio: ['Next.js', 'Zustand', 'gsap'],
     weather: ['Next.js', 'Open AI', 'Tanstack-Query'],
+    groupware: ['Next.js', 'AWS'],
+  }
+
+  const routingGit = (key: number, url: string) => {
+    if (key !== currentIndex) return
+    router.push(url)
   }
 
   const cards = [
     {
-      url: '/mega.png',
+      url: '/project/mega.png',
       title: <h1 className="sm:text-2xl text-lg">Mega Earn</h1>,
       subTitle: (
-        <p className="sm:text-md text-sm">
+        <div className="sm:text-md text-sm">
           <span>React를 사용한 블록체인 웹 어플리케이션</span>
           <p className="text-xs">2024.03 ~ 2024.04</p>
-        </p>
+        </div>
       ),
       description: (
         <div className="relative w-full pt-2 space-y-3 text-sm">
@@ -62,7 +77,7 @@ export default function BottomSection() {
       ),
     },
     {
-      url: '/portfolio.png',
+      url: '/project/portfolio.png',
       title: <h1 className="sm:text-2xl text-lg">Portfolio</h1>,
       subTitle: (
         <p className="sm:text-md text-sm">Next js를 사용한 포트폴리오 개발</p>
@@ -77,11 +92,16 @@ export default function BottomSection() {
           <p>
             Atmoic 패턴을 적용해 컴포넌트의 재사용률을 향상하고 유지보수가
             용이하도록 했습니다.
-            <br />
-            블라블라
+          </p>
+          <p>
+            지속적으로 디자인 수정, 최적화를 진행하고, 내용이 수정 될때마다
+            변경하여 배포해놓을 예정입니다.
           </p>
           <div
             className={`row-flex md:fixed bottom-16 justify-around simple-transition w-40 h-8 text-center border-2 rounded-lg cursor-pointer hover:bg-[#fff] hover:text-black`}
+            onClick={() => {
+              routingGit(1, GIT_PORTFOLIO)
+            }}
           >
             <FaGithub className="w-6 h-6" />
             <p className="text-lg">GitHub Code</p>
@@ -95,7 +115,7 @@ export default function BottomSection() {
       ),
     },
     {
-      url: '/weather.png',
+      url: '/project/weather.png',
       title: <h1 className="sm:text-2xl text-lg">Weather AI</h1>,
       subTitle: (
         <p className="sm:text-md text-sm">
@@ -114,8 +134,22 @@ export default function BottomSection() {
             <span className="text-[#9DF3c4]">Open AI</span>를 사용해 간단한
             추천을 받을수 있도록 했습니다.
           </p>
+          <p>
+            <span className="text-[#9DF3c4]">Zustand</span>를 사용해 사용자 검색
+            데이터가 <span className="text-[#9DF3c4]">새로고침시에도 유지</span>{' '}
+            되도록 localStorage에 저장했으며, 해당 데이터를가 Ai에 자동으로 입력
+            되게끔 했습니다.
+          </p>
+          <p>
+            외부 API로 인한 CORS 처리, 요청 로직 분리/일원화를 위해 Next.js 의{' '}
+            <span className="text-[#9DF3c4]">API Route</span>를 사용한{' '}
+            <span className="text-[#9DF3c4]">BFF 패턴</span>을 적용했습니다.
+          </p>
           <div
             className={`row-flex md:fixed bottom-16 justify-around simple-transition w-40 h-8 text-center border-2 rounded-lg cursor-pointer hover:bg-[#fff] hover:text-black`}
+            onClick={() => {
+              routingGit(2, GIT_WEATHER)
+            }}
           >
             <FaGithub className="w-6 h-6" />
             <p className="text-lg">GitHub Code</p>
@@ -129,19 +163,70 @@ export default function BottomSection() {
       ),
     },
     {
-      url: '/bg.jpg',
-      title: <h1 className="sm:text-2xl text-lg">Mega Earn</h1>,
+      url: '/project/groupware.png',
+      title: <h1 className="sm:text-2xl text-lg">GroupWare</h1>,
       subTitle: (
         <p className="sm:text-md text-sm">
-          React를 사용한 블록체인 웹 어플리케이션
+          Next.js를 사용한 그룹웨어 서비스 개발
         </p>
       ),
-      description: <p>dd</p>,
+      description: (
+        <div className="relative pt-2 space-y-3 text-sm">
+          <p>팀원과 함께 기획/디자인/개발을 진행한 협업 프로젝트입니다.</p>
+          <p>
+            협업간 원활한 소통을 위해{' '}
+            <span className="text-[#9DF3c4]">
+              Figma/Markdown을 통한 기획/인터페이스 문서화
+            </span>
+            를 진행했습니다.
+          </p>
+          <p>
+            Markdown 템플릿을 지원하기 위해 Toast-Ui-Editor를 사용해 CRUD기능을
+            개발했으며, 손쉬운 칸반보드 개발을 위해 ReactDnD 라이브러리를
+            사용했습니다.
+            <br />
+            또한 장소의 시각적 표시를 위해 Kakao Map API를 사용해 장소 검색/선택
+            기능을 개발했습니다.
+            <br />
+            API 요청간, 로직 일원화 및 유지보수 개선을 위해{' '}
+            <span className="text-[#9DF3c4]">제네릭을 활용한 모듈화</span>를
+            실시했습니다.
+          </p>
+          <p>
+            완성된 프로젝트는{' '}
+            <span className="text-[#9DF3c4]">AWS Code Build/Deploy</span>를
+            사용한 CI/CD 파이프라인을 구축해 배포했습니다.
+          </p>
+          <p className="text-xs">
+            📌 현재는 AWS 기간 만료로 인해 서비스 되고 있지 않습니다.
+          </p>
+          <div className="mt-3">
+            <Link
+              href={GIT_WEATHER}
+              className={`row-flex md:fixed bottom-16 justify-around simple-transition w-40 h-7 text-center border-2 rounded-lg cursor-pointer hover:bg-[#fff] hover:text-black`}
+            >
+              <FaGithub className="w-4 h-4" />
+              <p className="text-md">GitHub Code</p>
+            </Link>
+          </div>
+          <div className="bottom-4 row-flex md:fixed md:w-auto justify-around w-full gap-2 mt-12">
+            {cardsStacks.groupware.map((data) => (
+              <Badge title={data} key={data} />
+            ))}
+          </div>
+        </div>
+      ),
     },
   ]
+
   return (
     <article className="relative row-span-3">
-      <Carousel cards={cards} />
+      <Carousel
+        cards={cards}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
+      <DownArrow next={CONTACT} scrollY={1000} />
     </article>
   )
 }
