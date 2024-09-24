@@ -7,7 +7,7 @@ export function splitText(element: HTMLElement) {
 }
 
 // 개별 문자에 애니메이션을 적용하는 함수
-export function animateRandomLetters(element: HTMLElement) {
+export function animateRandomLettersIn(element: HTMLElement) {
   gsap.fromTo(
     element.querySelectorAll('span'),
     { opacity: 0 },
@@ -17,9 +17,21 @@ export function animateRandomLetters(element: HTMLElement) {
       ease: 'power2.out',
       stagger: {
         each: 0.1,
-        // 무작위 순서로 페이드 인
         from: 'random',
       },
     },
   )
+}
+
+// 나갈 때 애니메이션
+export function animateRandomLettersOut(element: HTMLElement) {
+  gsap.to(element.querySelectorAll('span'), {
+    opacity: 0,
+    duration: 1,
+    ease: 'power2.in',
+    stagger: {
+      each: 0.1,
+      from: 'random',
+    },
+  })
 }
