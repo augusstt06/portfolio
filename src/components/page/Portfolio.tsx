@@ -2,9 +2,8 @@ import { Element } from 'react-scroll'
 
 import { ABOUTME, EXPERIENCE } from '@/constant'
 
-import Experience from '../template/Experience'
-
 import AboutMe from '@/components/template/AboutMe'
+import Experience from '@/components/template/Experience'
 
 export default function Portfoilo() {
   return (
