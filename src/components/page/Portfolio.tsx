@@ -1,6 +1,6 @@
 import { Element } from 'react-scroll'
 
-import { ABOUTME, EXPERIENCE } from '@/constant'
+import { ABOUTME, PROJECT } from '@/constant'
 
 import AboutMe from '@/components/template/AboutMe'
 import Experience from '@/components/template/Experience'
@@ -12,7 +12,7 @@ export default function Portfoilo() {
         <AboutMe />
       </Element>
 
-      <Element name={EXPERIENCE}>
+      <Element name={PROJECT}>
         <Experience />
       </Element>
     </section>

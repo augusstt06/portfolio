@@ -1,8 +1,8 @@
-import { EXPERIENCE } from '@/constant'
+import { PROJECT } from '@/constant'
 
 export default function Experience() {
   return (
-    <section id={EXPERIENCE} className="grid h-screen grid-rows-3 pt-20">
+    <section id={PROJECT} className="h-screen pt-20 grid grid-rows-3">
       Experience section
     </section>
   )
