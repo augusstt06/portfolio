@@ -40,7 +40,7 @@ export default function DropDownText() {
   }, [setStep])
 
   return (
-    <article className="col-flex abs-center justify-center space-y-5">
+    <article className="justify-center col-flex abs-center space-y-5">
       <div
         ref={headParagraphRef}
         className="cursor-pointer text-3xl max-w-2xl mx-auto leading-tight text-center text-[#9DF3C4]"
