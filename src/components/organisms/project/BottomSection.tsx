@@ -70,7 +70,7 @@ export default function BottomSection(props: Props) {
             </span>
             을 위해 Tanstack-Query를 사용했습니다.
           </p>
-          <p className="text-xs">
+          <p className="text-xs text-red-300">
             📌 현재는 이벤트 종료 및 회사측의 레포지토리 접근 권한 변경으로
             열람이 제한되어있습니다.
           </p>
@@ -213,7 +213,7 @@ export default function BottomSection(props: Props) {
             </span>
             를 사용한 CI/CD 파이프라인을 구축해 배포했습니다.
           </p>
-          <p className="text-xs">
+          <p className="text-xs text-red-300">
             📌 현재는 AWS 기간 만료로 인해 서비스 되고 있지 않습니다.
           </p>
           {/* <div
