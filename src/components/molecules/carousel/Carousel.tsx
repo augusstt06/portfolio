@@ -42,7 +42,6 @@ export function Carousel(props: Props) {
 
         const positionIndex = (i - currentIndex + cards.length) % cards.length
 
-        // Adjust transformations for the current, next, and previous cards
         if (positionIndex === 0) {
           card.style.transform = 'translateX(0) translateZ(0) scale(1)'
           card.style.opacity = '1'
@@ -55,7 +54,7 @@ export function Carousel(props: Props) {
         } else {
           card.style.transform =
             'translateX(-100%) translateZ(-100px) scale(0.5)'
-          card.style.opacity = '0' // Hide cards not in view
+          card.style.opacity = '0'
         }
       }
     }
@@ -86,7 +85,7 @@ export function Carousel(props: Props) {
                 pointerEvents: isActive || isNext || isPrev ? 'auto' : 'none', // Allow clicks only on active and adjacent cards
               }}
               onClick={() => {
-                if (isActive) return // Do nothing if the card is active
+                if (isActive) return
                 if (isNext) next()
                 if (isPrev) prev()
               }}
