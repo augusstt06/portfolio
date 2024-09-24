@@ -17,7 +17,8 @@
 @layer base {
   body {
     font-family: 'Unbounded';
-    background-color: #352f44;
+    /* background-color: #352f44; */
+    background-color: #414c61;
   }
 }
 @layer utilities {
@@ -41,3 +42,5 @@
     @apply flex flex-row items-center;
   }
 }
+/* #414C61 */
+/* #d7b4b2 */

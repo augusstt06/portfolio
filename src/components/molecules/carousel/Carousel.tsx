@@ -5,6 +5,8 @@ import React, {
   useRef,
 } from 'react'
 
+import { MAIN_COLOR_TEXT } from '@/constant'
+
 export type Card = {
   url: string
   title: JSX.Element
@@ -90,7 +92,9 @@ export function Carousel(props: Props) {
                 if (isPrev) prev()
               }}
             >
-              <div className="bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[#9DF3c4] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font">
+              <div
+                className={`bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[${MAIN_COLOR_TEXT}] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font`}
+              >
                 <div className="md:col-span-1 row-span-1">
                   <img
                     src={card.url}

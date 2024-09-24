@@ -1,5 +1,7 @@
 import { type Dispatch, type SetStateAction } from 'react'
 
+import { MAIN_COLOR_TEXT } from '@/constant'
+
 import TypingText from '@/components/molecules/animate/TypingText'
 
 type Props = {
@@ -15,7 +17,7 @@ export default function TopSection(props: Props) {
           text="A Steadily growing Developer ."
           breakAfter="growing "
           highlightWord="growing"
-          highlightClass="text-[#9DF3c4] font-extrabold uppercase border-b-4 border-[#9DF3c4]"
+          highlightClass={`text-[${MAIN_COLOR_TEXT}] font-extrabold uppercase border-b-4 border-[${MAIN_COLOR_TEXT}]`}
         />
       </div>
     </article>

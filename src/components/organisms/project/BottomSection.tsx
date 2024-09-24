@@ -4,7 +4,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FaGithub } from 'react-icons/fa'
 
-import { CONTACT, GIT_PORTFOLIO, GIT_WEATHER } from '@/constant'
+import {
+  CONTACT,
+  GIT_PORTFOLIO,
+  GIT_WEATHER,
+  MAIN_COLOR_TEXT,
+} from '@/constant'
 
 import Badge from '@/components/atom/badge/Badge'
 import DownArrow from '@/components/molecules/arrow/DownArrow'
@@ -39,19 +44,21 @@ export default function BottomSection() {
         <div className="relative w-full pt-2 space-y-3 text-sm">
           <p>블록체인 관련 이벤트 페이지와 admin 페이지를 개발했습니다</p>
           <p>
-            서버측에서 다루는 <span className="text-[#9DF3c4]">bigint</span>와
+            서버측에서 다루는{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>bigint</span>와
             클라이언트에서 다루는 number 간{' '}
-            <span className="text-[#9DF3c4]">
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
               타입차이로 발생하는 버그 방지
             </span>
             를 위해 를 위해 양방향으로 전환 가능한 모듈을 개발해 사용했습니다.
           </p>
           <p>
             네트워크 변경시 기타 이벤트 발생을 제한하기 위한{' '}
-            <span className="text-[#9DF3c4]">Fallback UI</span>를 사용, 5초 주기
-            <span className="text-[#9DF3c4]">polling</span>을 통한 데이터
-            최신화, 최대 10회까지 리렌더링 되는 컴포넌트를{' '}
-            <span className="text-[#9DF3c4]">
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>Fallback UI</span>를
+            사용, 5초 주기
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>polling</span>을 통한
+            데이터 최신화, 최대 10회까지 리렌더링 되는 컴포넌트를{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
               메모이제이션을 통해 2회까지 단축
             </span>
             시키는 등, 사용자 경험을 높히기 위해 노력했습니다.
@@ -59,7 +66,7 @@ export default function BottomSection() {
           <p>
             반복 사용이 잦은 UI에 대해서는 styled-component로 모듈화해
             유지보수가 용이하도록 했으며,{' '}
-            <span className="text-[#9DF3c4]">
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
               서버/클라이언트 상태 분리 및 데이터 캐싱
             </span>
             을 위해 Tanstack-Query를 사용했습니다.
@@ -86,8 +93,8 @@ export default function BottomSection() {
         <div className="relative pt-2 space-y-3 text-sm">
           <p>현재까지 공부한 내용을 바탕으로 제작한 포트폴리오 사이트입니다.</p>
           <p>
-            <span className="text-[#9DF3c4]">GSAP</span>를 사용해 손쉽게
-            애니메이션을 구현하여 동적인 사용감을 주려고 노력했습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>GSAP</span>를 사용해
+            손쉽게 애니메이션을 구현하여 동적인 사용감을 주려고 노력했습니다.
           </p>
           <p>
             Atmoic 패턴을 적용해 컴포넌트의 재사용률을 향상하고 유지보수가
@@ -129,21 +136,27 @@ export default function BottomSection() {
           </p>
           <p>
             날씨 정보를{' '}
-            <span className="text-[#9DF3c4]">Open Weather Map API</span>에서
-            가져와 표시 후, 데이터를 바탕으로{' '}
-            <span className="text-[#9DF3c4]">Open AI</span>를 사용해 간단한
-            추천을 받을수 있도록 했습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
+              Open Weather Map API
+            </span>
+            에서 가져와 표시 후, 데이터를 바탕으로{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>Open AI</span>를
+            사용해 간단한 추천을 받을수 있도록 했습니다.
           </p>
           <p>
-            <span className="text-[#9DF3c4]">Zustand</span>를 사용해 사용자 검색
-            데이터가 <span className="text-[#9DF3c4]">새로고침시에도 유지</span>{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>Zustand</span>를
+            사용해 사용자 검색 데이터가{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
+              새로고침시에도 유지
+            </span>{' '}
             되도록 localStorage에 저장했으며, 해당 데이터를가 Ai에 자동으로 입력
             되게끔 했습니다.
           </p>
           <p>
             외부 API로 인한 CORS 처리, 요청 로직 분리/일원화를 위해 Next.js 의{' '}
-            <span className="text-[#9DF3c4]">API Route</span>를 사용한{' '}
-            <span className="text-[#9DF3c4]">BFF 패턴</span>을 적용했습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>API Route</span>를
+            사용한 <span className={`text-[${MAIN_COLOR_TEXT}]`}>BFF 패턴</span>
+            을 적용했습니다.
           </p>
           <div
             className={`row-flex md:fixed bottom-16 justify-around simple-transition w-40 h-8 text-center border-2 rounded-lg cursor-pointer hover:bg-[#fff] hover:text-black`}
@@ -175,7 +188,7 @@ export default function BottomSection() {
           <p>팀원과 함께 기획/디자인/개발을 진행한 협업 프로젝트입니다.</p>
           <p>
             협업간 원활한 소통을 위해{' '}
-            <span className="text-[#9DF3c4]">
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
               Figma/Markdown을 통한 기획/인터페이스 문서화
             </span>
             를 진행했습니다.
@@ -189,13 +202,17 @@ export default function BottomSection() {
             기능을 개발했습니다.
             <br />
             API 요청간, 로직 일원화 및 유지보수 개선을 위해{' '}
-            <span className="text-[#9DF3c4]">제네릭을 활용한 모듈화</span>를
-            실시했습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
+              제네릭을 활용한 모듈화
+            </span>
+            를 실시했습니다.
           </p>
           <p>
             완성된 프로젝트는{' '}
-            <span className="text-[#9DF3c4]">AWS Code Build/Deploy</span>를
-            사용한 CI/CD 파이프라인을 구축해 배포했습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
+              AWS Code Build/Deploy
+            </span>
+            를 사용한 CI/CD 파이프라인을 구축해 배포했습니다.
           </p>
           <p className="text-xs">
             📌 현재는 AWS 기간 만료로 인해 서비스 되고 있지 않습니다.

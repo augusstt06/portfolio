@@ -1,5 +1,7 @@
 import { SiNextdotjs, SiReact, SiTypescript } from 'react-icons/si'
 
+import { MAIN_COLOR_TEXT } from '@/constant'
+
 export default function Skills() {
   const badges = [
     {
@@ -8,15 +10,25 @@ export default function Skills() {
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className="text-[#9DF3c4]">유틸리티 타입</span>을 활용한{' '}
-            <span className="text-[#9DF3c4]">타입 추론/단언</span>을 사용해 코드
-            안정성을 높히는데 익숙합니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              유틸리티 타입
+            </span>
+            을 활용한{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              타입 추론/단언
+            </span>
+            을 사용해 코드 안정성을 높히는데 익숙합니다.
           </p>
           <p>
             특히, 유지보수/재사용성 향상을 위해{' '}
-            <span className="text-[#9DF3c4]">Generic</span>과{' '}
-            <span className="text-[#9DF3c4]">Type Alias</span>를 사용해 비즈니스
-            로직을 모듈화하는 방법을 항상 고민하고 있습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              Generic
+            </span>
+            과{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              Type Alias
+            </span>
+            를 사용해 비즈니스 로직을 모듈화하는 방법을 항상 고민하고 있습니다.
           </p>
         </div>
       ),
@@ -27,12 +39,17 @@ export default function Skills() {
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className="text-[#9DF3c4]">Atomic 디자인 패턴</span>과{' '}
-            <span className="text-[#9DF3c4]">React Hook</span>을 사용한 컴포넌트
-            단위 개발에 익숙합니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              Atomic 디자인 패턴
+            </span>
+            과{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              React Hook
+            </span>
+            을 사용한 컴포넌트 단위 개발에 익숙합니다.
           </p>
           <p>
-            <span className="text-[#9DF3c4]">
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
               Redux, Zustand, Tanstack-Query
             </span>{' '}
             등 React 기반의 여러 라이브러리를 활용해 언제든 실사용이 가능하도록
@@ -47,14 +64,21 @@ export default function Skills() {
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className="text-[#9DF3c4]">SSR / CSR </span>을 적재적소에
-            활용하여 어플리케이션을 개발할수 있습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              SSR / CSR{' '}
+            </span>
+            을 적재적소에 활용하여 어플리케이션을 개발할수 있습니다.
           </p>
           <p>
             API 요청 로직 분리 / 일원화를 위해{' '}
-            <span className="text-[#9DF3c4]">API Route</span> 를 활용한{' '}
-            <span className="text-[#9DF3c4]">BFF 패턴</span>을 적용해
-            개발하는것을 선호합니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              API Route
+            </span>{' '}
+            를 활용한{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+              BFF 패턴
+            </span>
+            을 적용해 개발하는것을 선호합니다.
           </p>
         </div>
       ),
@@ -66,7 +90,7 @@ export default function Skills() {
       <div className="item-start lg:absolute lg:top-12 lg:left-24 xl:left-40 xxl:left-[30rem] lg:inline lg:space-y-10 flex flex-row justify-around">
         {badges.map((data) => (
           <div
-            className={`group hover:h-[17rem] xl:hover:h-[15rem] hover:w-80 xl:hover:w-[23rem] hover:border-[#9DF3c4] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 rounded-lg cursor-pointer`}
+            className={`group hover:h-[17rem] xl:hover:h-[15rem] hover:w-80 xl:hover:w-[23rem] hover:border-[${MAIN_COLOR_TEXT}] simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg border-2 rounded-lg cursor-pointer`}
             key={data.title}
           >
             <div className="col-span-1">{data.icon}</div>

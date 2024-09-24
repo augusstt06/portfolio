@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 
-import { ABOUTME, CONTACT, MAIN, PROJECT } from '@/constant'
+import { ABOUTME, CONTACT, MAIN, MAIN_COLOR_TEXT, PROJECT } from '@/constant'
 
 import { useStepStore } from '@/app/store'
 
@@ -61,13 +61,13 @@ export default function Nav() {
               onClick={() => {
                 clickHandler(data.title)
               }}
-              className={`relative w-[10rem] h-16 transition-colors duration-300 text-center hover:text-[#9DF3c4]
-                ${activeMenu === data.title ? 'text-[#9DF3c4]' : 'text-white'}
+              className={`relative w-[10rem] h-16 transition-colors duration-300 text-center hover:text-[${MAIN_COLOR_TEXT}]
+                ${activeMenu === data.title ? `text-[${MAIN_COLOR_TEXT}]` : 'text-white'}
               `}
             >
               {data.title}
               <span
-                className={`absolute left-0 bottom-0 h-1 bg-[#9DF3c4] transition-all duration-300 transform ${activeMenu === data.title ? 'w-full' : 'w-0'}`}
+                className={`absolute left-0 bottom-0 h-1 bg-[${MAIN_COLOR_TEXT}] transition-all duration-300 transform ${activeMenu === data.title ? 'w-full' : 'w-0'}`}
               />
             </button>
           </Link>
