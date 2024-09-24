@@ -36,7 +36,7 @@
   }
 
   .simple-transition {
-    @apply transition-all ease-in-out duration-300;
+    @apply transition-all ease-in-out duration-500;
   }
   .col-flex {
     @apply flex flex-col items-center;

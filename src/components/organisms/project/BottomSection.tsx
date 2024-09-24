@@ -10,7 +10,11 @@ import Badge from '@/components/atom/badge/Badge'
 import DownArrow from '@/components/molecules/arrow/DownArrow'
 import { Carousel } from '@/components/molecules/carousel/Carousel'
 
-export default function BottomSection() {
+type Props = {
+  isTopSectionEnd: boolean
+}
+export default function BottomSection(props: Props) {
+  const { isTopSectionEnd } = props
   const router = useRouter()
   const [currentIndex, setCurrentIndex] = useState(0)
   const cardsStacks = {
@@ -232,7 +236,9 @@ export default function BottomSection() {
   ]
 
   return (
-    <article className="relative row-span-3">
+    <article
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative row-span-3 simple-transition`}
+    >
       <Carousel
         cards={cards}
         currentIndex={currentIndex}

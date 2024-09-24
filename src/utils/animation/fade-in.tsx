@@ -1,3 +1,5 @@
+import { type Dispatch, type SetStateAction } from 'react'
+
 import gsap from 'gsap'
 
 export function splitText(element: HTMLElement) {
@@ -7,20 +9,27 @@ export function splitText(element: HTMLElement) {
 }
 
 // 개별 문자에 애니메이션을 적용하는 함수
-export function animateRandomLettersIn(element: HTMLElement) {
-  gsap.fromTo(
-    element.querySelectorAll('span'),
-    { opacity: 0 },
-    {
-      opacity: 1,
-      duration: 1,
-      ease: 'power2.out',
-      stagger: {
-        each: 0.1,
-        from: 'random',
+export function animateRandomLettersIn(
+  element: HTMLElement,
+  setState: Dispatch<SetStateAction<boolean>>,
+) {
+  void gsap
+    .fromTo(
+      element.querySelectorAll('span'),
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
       },
-    },
-  )
+    )
+    .then(() => {
+      setState(true)
+    })
 }
 
 // 나갈 때 애니메이션

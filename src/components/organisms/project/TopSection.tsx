@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { type Dispatch, type SetStateAction, useEffect, useRef } from 'react'
 
 import {
   animateRandomLettersIn,
@@ -6,7 +6,11 @@ import {
   splitText,
 } from '@/utils/animation/fade-in'
 
-export default function TopSection() {
+type Props = {
+  setIsTopSectionEnd: Dispatch<SetStateAction<boolean>>
+}
+export default function TopSection(props: Props) {
+  const { setIsTopSectionEnd } = props
   const projectRef = useRef<HTMLHeadingElement | null>(null)
 
   useEffect(() => {
@@ -17,7 +21,7 @@ export default function TopSection() {
             if (entry.isIntersecting) {
               // 컴포넌트가 화면에 진입했을 때 애니메이션 실행
               splitText(projectRef.current)
-              animateRandomLettersIn(projectRef.current)
+              animateRandomLettersIn(projectRef.current, setIsTopSectionEnd)
             } else {
               // 컴포넌트가 화면에서 나갔을 때 반대 애니메이션 실행
               animateRandomLettersOut(projectRef.current)
@@ -25,7 +29,6 @@ export default function TopSection() {
           }
         })
       },
-      // 50% 이상 보이거나 사라질 때 트리거
       { threshold: 0.5 },
     )
 
