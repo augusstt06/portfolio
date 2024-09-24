@@ -64,7 +64,7 @@ export function Carousel(props: Props) {
   }
 
   return (
-    <div className="w-2/3 md:w-[70rem] h-[35rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+    <div className="w-2/3 md:w-[70rem] h-[32rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
       <div
         ref={carouselRef}
         className="perspective-800 relative w-full h-full cursor-pointer"
@@ -97,7 +97,7 @@ export function Carousel(props: Props) {
                   {card.title}
                   {card.subTitle}
                 </div>
-                <div className="md:row-span-1 row-span-4 pl-2 pr-2">
+                <div className="md:row-span-3 h-full row-span-4 pl-2 pr-2 overflow-y-scroll">
                   {card.description}
                 </div>
               </div>
