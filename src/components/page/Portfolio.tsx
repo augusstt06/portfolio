@@ -3,7 +3,7 @@ import { Element } from 'react-scroll'
 import { ABOUTME, PROJECT } from '@/constant'
 
 import AboutMe from '@/components/template/AboutMe'
-import Experience from '@/components/template/Experience'
+import Project from '@/components/template/Project'
 
 export default function Portfoilo() {
   return (
@@ -13,7 +13,7 @@ export default function Portfoilo() {
       </Element>
 
       <Element name={PROJECT}>
-        <Experience />
+        <Project />
       </Element>
     </section>
   )

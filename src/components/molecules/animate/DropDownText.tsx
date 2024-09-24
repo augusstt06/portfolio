@@ -2,9 +2,14 @@ import { useEffect, useRef } from 'react'
 
 import gsap from 'gsap'
 
-import { ABOUTME } from '@/constant'
-
 import { useStepStore } from '@/app/store'
+import {
+  addExitAnimation,
+  animateHeaderText,
+  animateSubParagraph,
+  setupClickHandler,
+  wrapTextInSpan,
+} from '@/utils/animation/drop-down'
 
 export default function DropDownText() {
   const { setStep } = useStepStore()
@@ -17,91 +22,25 @@ export default function DropDownText() {
     const h1 = headParagraphRef.current.querySelector('h1')
     const small = headParagraphRef.current.querySelector('small')
 
-    if (h1) {
-      const h1Text = h1.innerText
-      h1.innerHTML = `<span style="display:inline-block">${h1Text}</span>`
-    }
+    wrapTextInSpan(h1)
+    wrapTextInSpan(small)
 
-    if (small) {
-      const smallText = small.innerText
-      small.innerHTML = `<span style="display:inline-block">${smallText}</span>`
-    }
+    const tl = gsap.timeline({ delay: 0.5 })
 
-    const tl = gsap.timeline({
-      delay: 0.5,
-    })
-
-    tl.addLabel('enter')
-
-    if (h1) {
-      tl.fromTo(
-        h1.querySelector('span'),
-        0.6,
-        { opacity: 0, yPercent: 100 },
-        { opacity: 1, yPercent: 0, ease: 'Circ.easeOut' },
-      )
-    }
-
-    tl.addLabel('h1Complete')
-
-    if (small) {
-      tl.fromTo(
-        small.querySelector('span'),
-        0.6,
-        { opacity: 0, yPercent: 100 },
-        { opacity: 1, yPercent: 0, ease: 'Circ.easeOut' },
-        'h1Complete',
-      )
-    }
-
-    tl.fromTo(
-      subParagraphRef.current,
-      1,
-      { opacity: 0 },
-      { opacity: 0.6, ease: 'Linear.easeNone' },
-    )
-
-    tl.addPause()
-    tl.addLabel('exit')
-
-    tl.to(subParagraphRef.current, 0.5, { opacity: 0, ease: 'Linear.easeNone' })
-
-    if (h1) {
-      tl.to(
-        h1.querySelector('span'),
-        0.4,
-        { yPercent: -200, opacity: 0, ease: 'Circ.easeIn' },
-        'exit',
-      )
-    }
-
-    if (small) {
-      tl.to(
-        small.querySelector('span'),
-        0.4,
-        { yPercent: -200, opacity: 0, ease: 'Circ.easeIn' },
-        'exit',
-      )
-    }
-
-    tl.to(subParagraphRef.current, { duration: 0.4, y: 100 })
-
-    subParagraphRef.current.addEventListener('click', () => {
-      // reverse는 되감기라 아래로 떨어짐
-      void tl.play().then(() => {
-        setStep(ABOUTME)
-      })
-    })
+    animateHeaderText(h1, small, tl)
+    animateSubParagraph(subParagraphRef.current, tl)
+    addExitAnimation(h1, small, subParagraphRef.current, tl)
+    setupClickHandler(subParagraphRef.current, tl, setStep)
 
     return () => {
       subParagraphRef.current?.removeEventListener('click', () => {
         tl.play()
       })
     }
-  }, [])
+  }, [setStep])
 
   return (
-    <article className="justify-center col-flex abs-center space-y-5">
+    <article className="col-flex abs-center justify-center space-y-5">
       <div
         ref={headParagraphRef}
         className="cursor-pointer text-3xl max-w-2xl mx-auto leading-tight text-center text-[#9DF3C4]"
