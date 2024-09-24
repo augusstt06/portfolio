@@ -17,7 +17,7 @@ export default function TopSection(props: Props) {
           text="A Steadily growing Developer ."
           breakAfter="growing "
           highlightWord="growing"
-          highlightClass={`text-[${MAIN_COLOR_TEXT}] font-extrabold uppercase border-b-4 border-[${MAIN_COLOR_TEXT}]`}
+          highlightClass={`text-[${MAIN_COLOR_TEXT}] font-extrabold uppercase border-b-8 border-[${MAIN_COLOR_TEXT}]`}
         />
       </div>
     </article>

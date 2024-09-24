@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import Link from 'next/link'
+// import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FaGithub } from 'react-icons/fa'
 
@@ -22,7 +22,7 @@ export default function BottomSection() {
     megaEarn: ['React', 'Zustand', 'Tanstack-Query'],
     portfolio: ['Next.js', 'Zustand', 'gsap'],
     weather: ['Next.js', 'Open AI', 'Tanstack-Query'],
-    groupware: ['Next.js', 'AWS'],
+    groupware: ['Next.js', 'AWS', 'Redux'],
   }
 
   const routingGit = (key: number, url: string) => {
@@ -41,7 +41,7 @@ export default function BottomSection() {
         </div>
       ),
       description: (
-        <div className="relative w-full pt-2 space-y-3 text-sm">
+        <div className="relative w-full pt-2 space-y-3 text-md">
           <p>블록체인 관련 이벤트 페이지와 admin 페이지를 개발했습니다</p>
           <p>
             서버측에서 다루는{' '}
@@ -90,7 +90,7 @@ export default function BottomSection() {
         <p className="sm:text-md text-sm">Next js를 사용한 포트폴리오 개발</p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-sm">
+        <div className="relative pt-2 space-y-3 text-md">
           <p>현재까지 공부한 내용을 바탕으로 제작한 포트폴리오 사이트입니다.</p>
           <p>
             <span className={`text-[${MAIN_COLOR_TEXT}]`}>GSAP</span>를 사용해
@@ -130,7 +130,7 @@ export default function BottomSection() {
         </p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-sm">
+        <div className="relative pt-2 space-y-3 text-md">
           <p>
             날씨 앱을 사용하다가 아이디어가 떠올라 개발한 어플리케이션입니다.
           </p>
@@ -177,14 +177,14 @@ export default function BottomSection() {
     },
     {
       url: '/project/groupware.png',
-      title: <h1 className="sm:text-2xl text-lg">GroupWare</h1>,
+      title: <h1 className="sm:text-2xl text-lg">Groupware</h1>,
       subTitle: (
         <p className="sm:text-md text-sm">
           Next.js를 사용한 그룹웨어 서비스 개발
         </p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-sm">
+        <div className="relative pt-2 space-y-3 text-md">
           <p>팀원과 함께 기획/디자인/개발을 진행한 협업 프로젝트입니다.</p>
           <p>
             협업간 원활한 소통을 위해{' '}
@@ -217,15 +217,15 @@ export default function BottomSection() {
           <p className="text-xs">
             📌 현재는 AWS 기간 만료로 인해 서비스 되고 있지 않습니다.
           </p>
-          <div className="mt-3">
-            <Link
-              href={GIT_WEATHER}
-              className={`row-flex md:fixed bottom-16 justify-around simple-transition w-40 h-7 text-center border-2 rounded-lg cursor-pointer hover:bg-[#fff] hover:text-black`}
-            >
-              <FaGithub className="w-4 h-4" />
-              <p className="text-md">GitHub Code</p>
-            </Link>
-          </div>
+          {/* <div
+            className={`row-flex md:fixed bottom-16 justify-around simple-transition w-40 h-8 text-center border-2 rounded-lg cursor-pointer hover:bg-[#fff] hover:text-black`}
+            onClick={() => {
+              routingGit(3, GIT_PORTFOLIO)
+            }}
+          >
+            <FaGithub className="w-6 h-6" />
+            <p className="text-lg">GitHub Code</p>
+          </div> */}
           <div className="bottom-4 row-flex md:fixed md:w-auto justify-around w-full gap-2 mt-12">
             {cardsStacks.groupware.map((data) => (
               <Badge title={data} key={data} />

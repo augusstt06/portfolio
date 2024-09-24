@@ -10,25 +10,16 @@ export default function Skills() {
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              유틸리티 타입
-            </span>
-            을 활용한{' '}
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              타입 추론/단언
-            </span>
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>유틸리티 타입</span>을
+            활용한{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>타입 추론/단언</span>
             을 사용해 코드 안정성을 높히는데 익숙합니다.
           </p>
           <p>
             특히, 유지보수/재사용성 향상을 위해{' '}
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              Generic
-            </span>
-            과{' '}
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              Type Alias
-            </span>
-            를 사용해 비즈니스 로직을 모듈화하는 방법을 항상 고민하고 있습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>Generic</span>과{' '}
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>Type Alias</span>를
+            사용해 비즈니스 로직을 모듈화하는 방법을 항상 고민하고 있습니다.
           </p>
         </div>
       ),
@@ -39,17 +30,14 @@ export default function Skills() {
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
               Atomic 디자인 패턴
             </span>
-            과{' '}
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              React Hook
-            </span>
-            을 사용한 컴포넌트 단위 개발에 익숙합니다.
+            과 <span className={`text-[${MAIN_COLOR_TEXT}]`}>React Hook</span>을
+            사용한 컴포넌트 단위 개발에 익숙합니다.
           </p>
           <p>
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>
               Redux, Zustand, Tanstack-Query
             </span>{' '}
             등 React 기반의 여러 라이브러리를 활용해 언제든 실사용이 가능하도록
@@ -64,20 +52,13 @@ export default function Skills() {
       text: (
         <div className="text-left text-md korean-font space-y-3">
           <p>
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              SSR / CSR{' '}
-            </span>
-            을 적재적소에 활용하여 어플리케이션을 개발할수 있습니다.
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>SSR / CSR </span>을
+            적재적소에 활용하여 어플리케이션을 개발할수 있습니다.
           </p>
           <p>
             API 요청 로직 분리 / 일원화를 위해{' '}
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              API Route
-            </span>{' '}
-            를 활용한{' '}
-            <span className={`text-[${MAIN_COLOR_TEXT}] text-3xl`}>
-              BFF 패턴
-            </span>
+            <span className={`text-[${MAIN_COLOR_TEXT}]`}>API Route</span> 를
+            활용한 <span className={`text-[${MAIN_COLOR_TEXT}]`}>BFF 패턴</span>
             을 적용해 개발하는것을 선호합니다.
           </p>
         </div>

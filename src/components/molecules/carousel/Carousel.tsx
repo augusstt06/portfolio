@@ -48,6 +48,7 @@ export function Carousel(props: Props) {
           card.style.transform = 'translateX(0) translateZ(0) scale(1)'
           card.style.opacity = '1'
         } else if (positionIndex === 1) {
+          ;<span className={`text-[${MAIN_COLOR_TEXT}]`}></span>
           card.style.transform = 'translateX(55%) translateZ(-50px) scale(0.5)'
           card.style.opacity = '0.7'
         } else if (positionIndex === cards.length - 1) {
@@ -93,7 +94,7 @@ export function Carousel(props: Props) {
               }}
             >
               <div
-                className={`bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[${MAIN_COLOR_TEXT}] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font`}
+                className={`bg-[#2e2e2e] w-full h-full rounded-lg border-2 border-[${MAIN_COLOR_TEXT}] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font`}
               >
                 <div className="md:col-span-1 row-span-1">
                   <img
