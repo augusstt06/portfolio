@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --main-color: #9df3c4;
+  --main-color: #2e2e2e;
 }
 @font-face {
   font-family: 'Unbounded';
@@ -21,7 +21,7 @@
   body {
     font-family: 'Unbounded';
     /* background-color: #352f44; */
-    background-color: #414c61;
+    background-color: #f1eaea;
   }
 }
 @layer utilities {
@@ -44,6 +44,60 @@
   .row-flex {
     @apply flex flex-row items-center;
   }
+
+  /* animate */
+  .container {
+    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#f1eaea];
+  }
+
+  .main {
+    @apply w-screen h-screen relative overflow-hidden;
+    perspective: 5000px;
+  }
+
+  .slitOne {
+    @apply absolute bottom-0 -right-[200px] z-10 w-[500px] h-[400px];
+    transform: skewX(-10deg);
+  }
+
+  .slitOneFront {
+    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#f1eaea];
+  }
+
+  .slitOneBack {
+    @apply absolute top-1/2 -left-[30px] z-[2] w-[100px] h-[120%];
+    transform: translateY(-50%);
+    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .slitTwo {
+    @apply absolute top-12 -left-[100px] z-[11] w-[300px] h-[400px];
+    transform: skewX(-10deg);
+  }
+
+  .slitTwoFront {
+    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#f1eaea];
+  }
+
+  .slitTwoBack {
+    @apply absolute top-1/2 -right-[30px] z-[4] w-[100px] h-[120%];
+    transform: translateY(-50%);
+    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent 60%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .textCube {
+    @apply absolute top-1/2 left-1/2 z-[1] w-[700px] block;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+  }
+
+  .textCubeWord {
+    @apply block absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em];
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    transform: rotateX(calc(98deg * var(--i)));
+    backface-visibility: hidden;
+  }
 }
-/* #414C61 */
-/* #d7b4b2 */
