@@ -82,7 +82,7 @@ export function Carousel(props: Props) {
               style={{
                 transformStyle: 'preserve-3d',
                 zIndex: cards.length - index,
-                pointerEvents: isActive || isNext || isPrev ? 'auto' : 'none', // Allow clicks only on active and adjacent cards
+                pointerEvents: isActive || isNext || isPrev ? 'auto' : 'none',
               }}
               onClick={() => {
                 if (isActive) return
