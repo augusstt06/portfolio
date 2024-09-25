@@ -32,9 +32,9 @@ export default function BottomSection(props: Props) {
   const cards = [
     {
       url: '/project/mega.png',
-      title: <h1 className="sm:text-2xl text-lg">Mega Earn</h1>,
+      title: <h1 className="text-lg sm:text-2xl">Mega Earn</h1>,
       subTitle: (
-        <div className="sm:text-md text-sm">
+        <div className="text-sm sm:text-md">
           <span>React를 사용한 블록체인 웹 어플리케이션</span>
           <p className="text-xs">2024.03 ~ 2024.04</p>
         </div>
@@ -74,7 +74,7 @@ export default function BottomSection(props: Props) {
             📌 현재는 이벤트 종료 및 회사측의 레포지토리 접근 권한 변경으로
             열람이 제한되어있습니다.
           </p>
-          <div className="bottom-4 row-flex md:fixed md:w-auto justify-around w-full gap-2 mt-12">
+          <div className="justify-around w-full mt-12 bottom-4 row-flex md:fixed md:w-auto gap-2">
             {cardsStacks.megaEarn.map((data) => (
               <Badge title={data} key={data} />
             ))}
@@ -84,9 +84,9 @@ export default function BottomSection(props: Props) {
     },
     {
       url: '/project/portfolio.png',
-      title: <h1 className="sm:text-2xl text-lg">Portfolio</h1>,
+      title: <h1 className="text-lg sm:text-2xl">Portfolio</h1>,
       subTitle: (
-        <p className="sm:text-md text-sm">Next js를 사용한 포트폴리오 개발</p>
+        <p className="text-sm sm:text-md">Next js를 사용한 포트폴리오 개발</p>
       ),
       description: (
         <div className="relative pt-2 space-y-3 text-md">
@@ -112,7 +112,7 @@ export default function BottomSection(props: Props) {
             <FaGithub className="w-6 h-6" />
             <p className="text-lg">GitHub Code</p>
           </div>
-          <div className="bottom-4 row-flex md:fixed md:w-auto justify-around w-full gap-2 mt-12">
+          <div className="justify-around w-full mt-12 bottom-4 row-flex md:fixed md:w-auto gap-2">
             {cardsStacks.portfolio.map((data) => (
               <Badge title={data} key={data} />
             ))}
@@ -122,9 +122,9 @@ export default function BottomSection(props: Props) {
     },
     {
       url: '/project/weather.png',
-      title: <h1 className="sm:text-2xl text-lg">Weather AI</h1>,
+      title: <h1 className="text-lg sm:text-2xl">Weather AI</h1>,
       subTitle: (
-        <p className="sm:text-md text-sm">
+        <p className="text-sm sm:text-md">
           Next.js를 사용한 날씨 + AI 어플리케이션
         </p>
       ),
@@ -166,7 +166,7 @@ export default function BottomSection(props: Props) {
             <FaGithub className="w-6 h-6" />
             <p className="text-lg">GitHub Code</p>
           </div>
-          <div className="bottom-4 row-flex md:fixed md:w-auto justify-around w-full gap-2 mt-12">
+          <div className="justify-around w-full mt-12 bottom-4 row-flex md:fixed md:w-auto gap-2">
             {cardsStacks.weather.map((data) => (
               <Badge title={data} key={data} />
             ))}
@@ -176,9 +176,9 @@ export default function BottomSection(props: Props) {
     },
     {
       url: '/project/groupware.png',
-      title: <h1 className="sm:text-2xl text-lg">Groupware</h1>,
+      title: <h1 className="text-lg sm:text-2xl">Groupware</h1>,
       subTitle: (
-        <p className="sm:text-md text-sm">
+        <p className="text-sm sm:text-md">
           Next.js를 사용한 그룹웨어 서비스 개발
         </p>
       ),
@@ -225,7 +225,7 @@ export default function BottomSection(props: Props) {
             <FaGithub className="w-6 h-6" />
             <p className="text-lg">GitHub Code</p>
           </div> */}
-          <div className="bottom-4 row-flex md:fixed md:w-auto justify-around w-full gap-2 mt-12">
+          <div className="justify-around w-full mt-12 bottom-4 row-flex md:fixed md:w-auto gap-2">
             {cardsStacks.groupware.map((data) => (
               <Badge title={data} key={data} />
             ))}

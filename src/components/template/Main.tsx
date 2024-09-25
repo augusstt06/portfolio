@@ -18,7 +18,7 @@ export default function Main() {
 
       <button
         disabled={!animationFinished}
-        className={`${animationFinished ? 'opacity-100' : 'opacity-0'} absolute simple-transition top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[var(--main-color)] text-4xl space-y-4 border-4 border-transparent hover:border-black py-4 px-4 rounded-lg`}
+        className={`${animationFinished ? 'opacity-100' : 'opacity-0'} absolute simple-transition top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black hover:text-[var(--main-color)] text-4xl space-y-4 py-4 px-4 hover:scale-[1.1]`}
         onClick={() => {
           setStep(ABOUTME)
         }}

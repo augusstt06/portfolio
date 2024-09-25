@@ -65,7 +65,7 @@ export function Carousel(props: Props) {
     <div className="w-2/3 md:w-[70rem] h-[32rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
       <div
         ref={carouselRef}
-        className="perspective-800 relative w-full h-full cursor-pointer"
+        className="relative w-full h-full cursor-pointer perspective-800"
         style={{
           transformStyle: 'preserve-3d',
         }}
@@ -102,11 +102,11 @@ export function Carousel(props: Props) {
                   />
                 </div>
                 <div className="md:col-span-1 md:grid-rows-5 grid grid-rows-4 row-span-2">
-                  <div className="place-content-center row-span-1 text-center">
+                  <div className="text-center place-content-center row-span-1">
                     {card.title}
                     {card.subTitle}
                   </div>
-                  <div className="md:row-span-3 h-full row-span-4 pl-2 pr-2 overflow-y-scroll">
+                  <div className="h-full pl-2 pr-2 overflow-y-scroll md:row-span-3 row-span-4">
                     {card.description}
                   </div>
                 </div>

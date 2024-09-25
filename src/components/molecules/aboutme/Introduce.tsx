@@ -60,7 +60,7 @@ export default function Introduce() {
         {paragraphs.map((data) => (
           <div key={data.key}>{data.content}</div>
         ))}
-        <div className="row-flex w-auto space-x-4 mt-4">
+        <div className="w-auto mt-4 row-flex space-x-4">
           {archivings.map((data) => (
             <Link href={data.url} key={data.title}>
               <div className="border-2 border-[#2e2e2e] w-24 place-content-center place-items-center grid grid-cols-3 rounded-lg px-1 hover:text-[#fff] simple-transition cursor-pointer hover:bg-[var(--main-color)]">
