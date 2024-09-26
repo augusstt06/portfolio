@@ -23,8 +23,7 @@ export default function Main() {
           setStep(ABOUTME)
         }}
       >
-        <p>Click to continue</p>
-        <p>Viewing the Portfolio</p>
+        <p>Click to Viewing the Portfolio</p>
       </button>
     </section>
   )
