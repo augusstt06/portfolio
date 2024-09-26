@@ -39,13 +39,13 @@ export default function DropDownText() {
   }, [])
 
   return (
-    <article className="justify-center col-flex abs-center space-y-8 w-2/3">
+    <article className="justify-center w-2/3 col-flex abs-center space-y-8">
       {/* FIXME: 넓이 조절 */}
       <div
         ref={headParagraphRef}
-        className="cursor-pointer text-2xl mx-auto leading-tight text-center text-black"
+        className="mx-auto text-2xl leading-tight text-center text-black cursor-pointer"
       >
-        <h1 className="mb-6 text-4xl w-full">Passionately Developing</h1>
+        <h1 className="w-full mb-6 text-4xl">Passionately Developing</h1>
         <small className="text-5xl text-[var(--main-color)]">
           and Growing Together.
         </small>
