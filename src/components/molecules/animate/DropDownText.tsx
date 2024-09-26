@@ -2,6 +2,9 @@ import { useEffect, useRef } from 'react'
 
 import gsap from 'gsap'
 
+import { BiLogoGmail } from 'react-icons/bi'
+import { FaGithubSquare } from 'react-icons/fa'
+
 import {
   addExitAnimation,
   animateHeaderText,
@@ -36,16 +39,21 @@ export default function DropDownText() {
   }, [])
 
   return (
-    <article className="justify-center col-flex abs-center space-y-5">
+    <article className="justify-center col-flex abs-center space-y-8 w-2/3">
       {/* FIXME: 넓이 조절 */}
       <div
         ref={headParagraphRef}
-        className="cursor-pointer text-2xl max-w-2/3 mx-auto leading-tight text-center text-black"
+        className="cursor-pointer text-2xl mx-auto leading-tight text-center text-black"
       >
-        <h1 className="mb-6 text-5xl">Passionately Developing</h1>
-        <small className="text-4xl text-[var(--main-color)]">
+        <h1 className="mb-6 text-4xl w-full">Passionately Developing</h1>
+        <small className="text-5xl text-[var(--main-color)]">
           and Growing Together.
         </small>
+      </div>
+      {/* FIXME:  반응형 추가하기 */}
+      <div className="text-black row-flex justify-around w-[20rem]">
+        <FaGithubSquare className="w-20 h-20" />
+        <BiLogoGmail className="w-20 h-20" />
       </div>
       {/* <p
         ref={subParagraphRef}
