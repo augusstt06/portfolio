@@ -9,7 +9,8 @@ export default function SkillBox(props: Props) {
   const { title, color, icon, text } = props
   return (
     <div
-      className={`bg-[${color}] text-[#fff] group hover:h-[17rem] xl:hover:h-[15rem] hover:w-80 xl:hover:w-[23rem]  simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg rounded-lg cursor-pointer`}
+      className={`text-[#fff] group hover:h-[17rem] xl:hover:h-[15rem] hover:w-80 xl:hover:w-[23rem]  simple-transition grid w-52 h-12 grid-cols-4 px-4 py-2 text-center text-lg rounded-lg cursor-pointer`}
+      style={{ backgroundColor: color }}
     >
       <div className="col-span-1">{icon}</div>
       <div className="col-span-3">{title}</div>

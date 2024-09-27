@@ -31,7 +31,7 @@ export default function Cube(props: Props) {
       <div className={'textCube '} ref={textCubeRef}>
         {[
           'Hello',
-          `'I'm ChungYeon Kim'`,
+          "I'm ChungYeon Kim",
           'Frontend Developer',
           'Welcome to my Portfolio!',
         ].map((text, index) => {

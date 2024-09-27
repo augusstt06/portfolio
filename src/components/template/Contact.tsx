@@ -47,7 +47,7 @@ export default function Contact() {
               onClick={handleConnectEmail}
             />
           </div>
-          <div className="w-full text-center bg-red-100">
+          <div className="w-full text-center">
             <p className="w-full text-4xl">Thank you for visit</p>
             <p className="text-xs">Copyright 2024 ChungYeonKim</p>
           </div>

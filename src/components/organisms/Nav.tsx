@@ -52,9 +52,9 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed w-full h-20 grid grid-cols-5 transition-opacity duration-1000 ease-in-out z-50 text-[#2e2e2e]`}
+      className={`fixed w-full h-20 md:grid md:grid-cols-5 transition-opacity duration-1000 ease-in-out z-50 text-[#2e2e2e] bg-red-400`}
     >
-      <section className="relative grid-center grid grid-cols-4 col-start-2 col-end-5">
+      <section className="relative grid-center grid grid-cols-4 md:col-start-2 md:col-end-5">
         {menus.map((data) => (
           <Link key={data.title} to={data.title} smooth={true} duration={500}>
             <button
