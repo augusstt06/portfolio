@@ -2,12 +2,15 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 
+import { useRouter } from 'next/navigation'
+
 import { ABOUTME, CONTACT, MAIN, PROJECT } from '@/constant'
 
 import { useStepStore } from '@/app/store'
 
 export default function Nav() {
-  const { step, setStep } = useStepStore()
+  const { setStep } = useStepStore()
+  const router = useRouter()
   const [activeMenu, setActiveMenu] = useState(ABOUTME)
 
   const menus = [
@@ -47,18 +50,19 @@ export default function Nav() {
     setStep(menu)
   }
 
-  const isButtonDisabled = step === MAIN
-
   return (
     <nav
-      className={`fixed w-full h-20 grid grid-cols-5 transition-opacity duration-1000 ease-in-out ${step !== MAIN ? 'opacity-100' : 'opacity-0'} z-50 text-[#2e2e2e]`}
+      className={`fixed w-full h-20 grid grid-cols-5 transition-opacity duration-1000 ease-in-out z-50 text-[#2e2e2e]`}
     >
       <section className="relative grid-center grid grid-cols-4 col-start-2 col-end-5">
         {menus.map((data) => (
           <Link key={data.title} to={data.title} smooth={true} duration={500}>
             <button
-              disabled={isButtonDisabled}
               onClick={() => {
+                if (data.title === MAIN) {
+                  router.push('/')
+                  return
+                }
                 clickHandler(data.title)
               }}
               className={`relative w-[10rem] h-16 transition-colors duration-300 text-center hover:text-[var(--main-color)]

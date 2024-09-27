@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { useRouter } from 'next/navigation'
+
 import { ABOUTME } from '@/constant'
 
 import { useStepStore } from '@/app/store'
@@ -7,9 +9,11 @@ import Cube from '@/components/molecules/animate/Cube'
 
 export default function Main() {
   const { setStep } = useStepStore()
+  const router = useRouter()
   const [animationFinished, setAnimationFinished] = useState(false)
   const onAnimationFinished = () => {
     setAnimationFinished(true)
+    router.push('/portfolio')
   }
 
   return (
