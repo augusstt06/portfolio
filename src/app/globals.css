@@ -1,3 +1,132 @@
+/* FIXME: 글씨색감 조정하기 */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --main-color: #0078ff;
+  --text-color: #539bec;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../../public/fonts/Unbounded-VariableFont_wght.ttf')
+    format('truetype');
+
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Jua-Regular';
+  src: url('../../public/fonts/Jua-Regular.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'DoHyeon';
+  src: url('../../public/fonts/DoHyeon.ttf') format('truetype');
+  font-weight: 900;
+}
+@layer base {
+  body {
+    font-family: 'Unbounded';
+    /* background-color: #352f44; */
+    background-color: #f1eaea;
+  }
+}
+@layer utilities {
+  .korean-font {
+    /* font-family: 'Jua-Regular'; */
+    font-family: 'DoHyeon';
+  }
+  .grid-center {
+    @apply place-content-center place-items-center;
+  }
+  .abs-center {
+    @apply absolute top-1/3 left-1/2 -translate-x-1/2;
+  }
+
+  .simple-transition {
+    @apply transition-all ease-in-out duration-500;
+  }
+  .col-flex {
+    @apply flex flex-col items-center;
+  }
+  .row-flex {
+    @apply flex flex-row items-center;
+  }
+
+  /* animate */
+  .container {
+    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#f1eaea];
+  }
+
+  .main {
+    @apply w-screen h-screen relative overflow-hidden;
+    perspective: 5000px;
+  }
+
+  .slitOne {
+    @apply absolute bottom-0 -right-[350px] z-10 w-[500px] h-[400px] hidden md:block;
+    transform: skewX(-10deg);
+  }
+
+  .slitOneFront {
+    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#f1eaea];
+  }
+
+  .slitOneBack {
+    @apply absolute top-1/2 -left-[30px] z-[2] w-[100px] h-[120%];
+    transform: translateY(-50%);
+    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .slitTwo {
+    @apply absolute top-44 -left-[250px] md:-left-[100px] z-[11] w-[300px] lg:w-[20rem] h-[400px] lg:-left-10 lg:top-40  md:top-28 hidden md:block;
+    transform: skewX(-10deg);
+  }
+
+  .slitTwoFront {
+    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#f1eaea];
+  }
+
+  .slitTwoBack {
+    @apply absolute top-1/2 -right-[30px] z-[4] w-[100px] h-[120%];
+    transform: translateY(-50%);
+    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent 60%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .textCube {
+    @apply absolute top-1/2 left-1/2 z-[1] w-[700px] block;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+  }
+
+  .textCubeWord {
+    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em] hidden md:block;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    transform: rotateX(calc(98deg * var(--i)));
+    backface-visibility: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .text {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .progress-bar {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -30,6 +30,7 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/return-await': 'off',
@@ -73,7 +74,6 @@ module.exports = {
         },
       },
     ],
-    'no-console': ['error'],
   },
   ignorePatterns: ['.eslintrc.js', 'inputValidate.tsx', '*.d.ts'],
   settings: {
