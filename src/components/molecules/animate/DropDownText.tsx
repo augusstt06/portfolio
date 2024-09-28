@@ -2,8 +2,7 @@ import { useEffect, useRef } from 'react'
 
 import gsap from 'gsap'
 
-import { BiLogoGmail } from 'react-icons/bi'
-import { FaGithubSquare } from 'react-icons/fa'
+import { useRouter } from 'next/navigation'
 
 import {
   addExitAnimation,
@@ -13,6 +12,10 @@ import {
 } from '@/utils/animation/drop-down'
 
 export default function DropDownText() {
+  const router = useRouter()
+  const clickHandler = () => {
+    router.push('/portfolio')
+  }
   const headParagraphRef = useRef<HTMLParagraphElement>(null)
   const subParagraphRef = useRef<HTMLParagraphElement>(null)
 
@@ -39,29 +42,24 @@ export default function DropDownText() {
   }, [])
 
   return (
-    <article className="justify-center w-2/3 col-flex abs-center space-y-8">
-      {/* FIXME: 넓이 조절 */}
+    <article className="justify-center w-3/4 col-flex abs-center space-y-8 block md:hidden">
       <div
         ref={headParagraphRef}
         className="mx-auto text-2xl leading-tight text-center text-black cursor-pointer"
       >
-        <h1 className="w-full mb-6 text-4xl">Passionately Developing</h1>
-        <small className="text-5xl text-[var(--main-color)]">
-          and Growing Together.
+        <h1 className="w-full mb-6 text-5xl">Hi I&apos;m ChungYeon Kim</h1>
+        <small className="text-4xl text-[var(--main-color)]">
+          Frontend Developer
         </small>
       </div>
-      {/* FIXME:  반응형 추가하기 */}
-      <div className="text-black row-flex justify-around w-[20rem]">
-        <FaGithubSquare className="w-20 h-20" />
-        <BiLogoGmail className="w-20 h-20" />
-      </div>
-      {/* <p
+      <p
         ref={subParagraphRef}
-        className="group text-center text-white text-lg opacity-0 mt-4 cursor-pointer hover:text-[var(--main-color)] simple-transition relative px-6 py-2"
+        className="group text-center text-[#2e2e2e] text-lg opacity-0 mt-4 cursor-pointer hover:text-[var(--main-color)] simple-transition relative px-6 py-2"
+        onClick={clickHandler}
       >
         Click to continue Viewing the Portfolio
         <span className="absolute inset-0 border-2 border-[var(--main-color)] transition-all duration-700 transform scale-x-0 origin-left group-hover:scale-x-100 pointer-events-none z-[-1] rounded-xl" />
-      </p> */}
+      </p>
     </article>
   )
 }

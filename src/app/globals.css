@@ -19,6 +19,11 @@
   src: url('../../public/fonts/Jua-Regular.ttf') format('truetype');
   font-weight: 900;
 }
+@font-face {
+  font-family: 'DoHyeon';
+  src: url('../../public/fonts/DoHyeon.ttf') format('truetype');
+  font-weight: 900;
+}
 @layer base {
   body {
     font-family: 'Unbounded';
@@ -28,7 +33,8 @@
 }
 @layer utilities {
   .korean-font {
-    font-family: 'Jua-Regular';
+    /* font-family: 'Jua-Regular'; */
+    font-family: 'DoHyeon';
   }
   .grid-center {
     @apply place-content-center place-items-center;
@@ -58,7 +64,7 @@
   }
 
   .slitOne {
-    @apply absolute bottom-0 -right-[200px] z-10 w-[500px] h-[400px];
+    @apply absolute bottom-0 -right-[400px] z-10 w-[500px] h-[400px] hidden md:block;
     transform: skewX(-10deg);
   }
 
@@ -74,7 +80,7 @@
   }
 
   .slitTwo {
-    @apply absolute top-12 -left-[100px] z-[11] w-[300px] h-[400px];
+    @apply absolute top-44 -left-[250px] md:-left-[100px] z-[11] w-[300px] lg:w-[20rem] h-[400px] lg:-left-10 lg:top-40  md:top-28 hidden md:block;
     transform: skewX(-10deg);
   }
 
@@ -96,7 +102,7 @@
   }
 
   .textCubeWord {
-    @apply block absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em];
+    @apply block absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em] hidden md:block;
     transform-style: preserve-3d;
     transform-origin: top center;
     transform: rotateX(calc(98deg * var(--i)));
