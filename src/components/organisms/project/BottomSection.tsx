@@ -34,13 +34,13 @@ export default function BottomSection(props: Props) {
       url: '/project/mega.png',
       title: <h1 className="text-lg sm:text-3xl">Mega Earn</h1>,
       subTitle: (
-        <div className="text-sm sm:text-md">
+        <div className="text-sm sm:text-md text-white">
           <span>React를 사용한 블록체인 웹 어플리케이션</span>
           <p className="text-xs">2024.03 ~ 2024.04</p>
         </div>
       ),
       description: (
-        <div className="relative w-full pt-2 space-y-3 text-md">
+        <div className="relative w-full pt-2 space-y-3 text-md text-white">
           <p>블록체인 관련 이벤트 페이지와 admin 페이지를 개발했습니다</p>
           <p>
             서버측에서 다루는{' '}
@@ -84,12 +84,14 @@ export default function BottomSection(props: Props) {
     },
     {
       url: '/project/portfolio.png',
-      title: <h1 className="text-lg sm:text-3xl">Portfolio</h1>,
+      title: <h1 className="text-lg sm:text-3xl text-white">Portfolio</h1>,
       subTitle: (
-        <p className="text-sm sm:text-md">Next js를 사용한 포트폴리오 개발</p>
+        <p className="text-sm sm:text-md text-white">
+          Next js를 사용한 포트폴리오 개발
+        </p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-md">
+        <div className="relative pt-2 space-y-3 text-md text-whhite">
           <p>현재까지 공부한 내용을 바탕으로 제작한 포트폴리오 사이트입니다.</p>
           <p>
             <span className={`text-[var(--text-color)]`}>GSAP</span>를 사용해
@@ -122,14 +124,14 @@ export default function BottomSection(props: Props) {
     },
     {
       url: '/project/weather.png',
-      title: <h1 className="text-lg sm:text-3xl">Weather AI</h1>,
+      title: <h1 className="text-lg sm:text-3xl text-white">Weather AI</h1>,
       subTitle: (
-        <p className="text-sm sm:text-md">
+        <p className="text-sm sm:text-md text-white">
           Next.js를 사용한 날씨 + AI 어플리케이션
         </p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-md">
+        <div className="relative pt-2 space-y-3 text-md text-white">
           <p>
             날씨 앱을 사용하다가 아이디어가 떠올라 개발한 어플리케이션입니다.
           </p>
@@ -176,14 +178,14 @@ export default function BottomSection(props: Props) {
     },
     {
       url: '/project/groupware.png',
-      title: <h1 className="text-lg sm:text-2xl">Groupware</h1>,
+      title: <h1 className="text-lg sm:text-2xl text-white">Groupware</h1>,
       subTitle: (
-        <p className="text-sm sm:text-md">
+        <p className="text-sm sm:text-md text-white">
           Next.js를 사용한 그룹웨어 서비스 개발
         </p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-md">
+        <div className="relative pt-2 space-y-3 text-md text-white">
           <p>팀원과 함께 기획/디자인/개발을 진행한 협업 프로젝트입니다.</p>
           <p>
             협업간 원활한 소통을 위해{' '}
