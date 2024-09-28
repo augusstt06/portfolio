@@ -62,7 +62,7 @@ export function Carousel(props: Props) {
   }, [currentIndex])
 
   return (
-    <div className="w-2/3 md:w-[70rem] h-[32rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+    <div className="w-2/3 md:w-[70rem] h-[40rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
       <div
         ref={carouselRef}
         className="relative w-full h-full cursor-pointer perspective-800"
@@ -92,7 +92,7 @@ export function Carousel(props: Props) {
               }}
             >
               <div
-                className={`bg-[#2e2e2e] w-full h-full rounded-lg border-2 border-[var(--main-color)] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font`}
+                className={`bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[var(--main-color)] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font`}
               >
                 <div className="md:col-span-1 row-span-1">
                   <img
@@ -106,7 +106,7 @@ export function Carousel(props: Props) {
                     {card.title}
                     {card.subTitle}
                   </div>
-                  <div className="h-full pl-2 pr-2 overflow-y-scroll md:row-span-3 row-span-4">
+                  <div className="h-full pl-2 pr-2 overflow-y-scroll md:row-span-3 row-span-4 text-[1.1rem]">
                     {card.description}
                   </div>
                 </div>
