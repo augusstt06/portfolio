@@ -65,7 +65,7 @@
   }
 
   .slitOne {
-    @apply absolute bottom-0 -right-[400px] z-10 w-[500px] h-[400px] hidden md:block;
+    @apply absolute bottom-0 -right-[350px] z-10 w-[500px] h-[400px] hidden md:block;
     transform: skewX(-10deg);
   }
 
