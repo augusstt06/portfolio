@@ -2,7 +2,7 @@
 
 ## Overview
 
-<img src='/Users/chungyeonkim/Desktop/portfolio/public/project/portfolio.png'/>
+<!-- <img src='/Users/chungyeonkim/Desktop/portfolio/public/project/portfolio.png'/> -->
 
 공부한 내용을 바탕으로 직접 개발한 포트폴리오 사이트입니다.
 추후 내용 수정 및 디자인 개선, 코드 최적화를 꾸준히 실시할 예정입니다.
