@@ -1,42 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
+
+## Overview
+
+<img src='/Users/chungyeonkim/Desktop/portfolio/public/project/portfolio.png'/>
+
+공부한 내용을 바탕으로 직접 개발한 포트폴리오 사이트입니다.
+추후 내용 수정 및 디자인 개선, 코드 최적화를 꾸준히 실시할 예정입니다.
+
+## Domain
+
+## Stacks
+
+<div>
+  <img src="https://img.shields.io/badge/next js 14-000000?style=for-the-badge&logo=nextdotjs&logoColor=#000000">
+  <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/tailwind css-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
+</div>
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-yarn run dev
+yarn install
+
+yarn dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## File Structure
 
 ```bash
 src
+├ utils
+├ constant
+├ components
 └── app
     ├── (route)
-    ├── _components
+    ├── /store
     ├── globals.css
     ├── layout.tsx
     └── page.tsx
 ```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
