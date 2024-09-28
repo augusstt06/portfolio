@@ -102,7 +102,7 @@
   }
 
   .textCubeWord {
-    @apply block absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em] hidden md:block;
+    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em] hidden md:block;
     transform-style: preserve-3d;
     transform-origin: top center;
     transform: rotateX(calc(98deg * var(--i)));
