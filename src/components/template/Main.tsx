@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 
 import Cube from '@/components/molecules/animate/Cube'
 import DropDownText from '@/components/molecules/animate/DropDownText'
+import { asciiArt } from '@/utils/console/ascii'
 
 export default function Main() {
   const router = useRouter()
@@ -11,7 +12,7 @@ export default function Main() {
   const onAnimationFinished = () => {
     setAnimationFinished(true)
   }
-
+  asciiArt()
   return (
     <section className={'main'}>
       {/* <div className="hidden md:block"> */}
