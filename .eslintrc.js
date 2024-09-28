@@ -43,37 +43,38 @@ module.exports = {
         allowSeparatedGroups: true,
       },
     ],
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object',
-          'type',
-        ],
-        pathGroups: [
-          {
-            pattern: 'react*',
-            group: 'builtin',
-          },
-          {
-            pattern: '@/*',
-            group: 'internal',
-            position: 'after',
-          },
-        ],
-        'newlines-between': 'always',
-        pathGroupsExcludedImportTypes: ['react*'],
-        alphabetize: {
-          order: 'asc',
-        },
-      },
-    ],
+    'import/order': 'off',
+    // 'import/order': [
+    //   'error',
+    //   {
+    //     groups: [
+    //       'builtin',
+    //       'external',
+    //       'internal',
+    //       'parent',
+    //       'sibling',
+    //       'index',
+    //       'object',
+    //       'type',
+    //     ],
+    //     pathGroups: [
+    //       {
+    //         pattern: 'react*',
+    //         group: 'builtin',
+    //       },
+    //       {
+    //         pattern: '@/*',
+    //         group: 'internal',
+    //         position: 'after',
+    //       },
+    //     ],
+    //     'newlines-between': 'always',
+    //     pathGroupsExcludedImportTypes: ['react*'],
+    //     alphabetize: {
+    //       order: 'asc',
+    //     },
+    //   },
+    // ],
   },
   ignorePatterns: ['.eslintrc.js', 'inputValidate.tsx', '*.d.ts'],
   settings: {
