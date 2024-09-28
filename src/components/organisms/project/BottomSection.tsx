@@ -32,7 +32,7 @@ export default function BottomSection(props: Props) {
   const cards = [
     {
       url: '/project/mega.png',
-      title: <h1 className="text-lg sm:text-3xl">Mega Earn</h1>,
+      title: <h1 className="text-lg sm:text-3xl text-white">Mega Earn</h1>,
       subTitle: (
         <div className="text-sm sm:text-md text-white">
           <span>React를 사용한 블록체인 웹 어플리케이션</span>
@@ -91,7 +91,7 @@ export default function BottomSection(props: Props) {
         </p>
       ),
       description: (
-        <div className="relative pt-2 space-y-3 text-md text-whhite">
+        <div className="relative pt-2 space-y-3 text-md text-white">
           <p>현재까지 공부한 내용을 바탕으로 제작한 포트폴리오 사이트입니다.</p>
           <p>
             <span className={`text-[var(--text-color)]`}>GSAP</span>를 사용해
