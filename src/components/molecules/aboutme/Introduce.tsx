@@ -45,7 +45,7 @@ export default function Introduce() {
   ]
 
   return (
-    <article className="w-screen md:h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative bg-orange-400 h-full">
+    <article className="w-screen md:h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative h-full">
       <div className="h-full xl:top-12 md:top-12 md:left-20 lg:left-4 xl:left-24 xxl:left-[25rem] top-12  md:absolute pl-8 pr-8 md:pl-0 md:-r-0 text-left korean-font w-full overflow-scroll">
         {paragraphs.map((data) => (
           <div key={data.key}>{data.content}</div>

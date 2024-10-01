@@ -4,11 +4,12 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { FaGithub } from 'react-icons/fa'
 
-import { CONTACT, GIT_PORTFOLIO, GIT_WEATHER } from '@/constant'
+import { GIT_PORTFOLIO, GIT_WEATHER } from '@/constant'
 
 import Badge from '@/components/atom/badge/Badge'
-import DownArrow from '@/components/molecules/arrow/DownArrow'
+// import DownArrow from '@/components/molecules/arrow/DownArrow'
 import { Carousel } from '@/components/molecules/carousel/Carousel'
+import Card from '@/components/molecules/card/Card'
 
 type Props = {
   isTopSectionEnd: boolean
@@ -239,14 +240,20 @@ export default function BottomSection(props: Props) {
 
   return (
     <article
-      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative row-span-3 simple-transition bg-indigo-200 flex flex-row lg:inline-block`}
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative row-span-3 simple-transition flex flex-row lg:inline-block`}
     >
       <Carousel
         cards={cards}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
       />
-      <DownArrow next={CONTACT} scrollY={958} />
+      <div className="w-full md:hidden grid grid-cols-3 gap-5 pr-3 pl-3">
+        {cards.map((data) => (
+          <Card key={data.url} />
+        ))}
+      </div>
+
+      {/* <DownArrow next={CONTACT} scrollY={958} /> */}
     </article>
   )
 }
