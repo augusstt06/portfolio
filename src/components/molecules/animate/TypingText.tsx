@@ -98,7 +98,7 @@ export default function TypingText(props: Props) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <div className="invisible">{text}</div>
       <div className="absolute top-0 left-0">
         {renderText()}
