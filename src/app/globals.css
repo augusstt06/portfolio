@@ -27,6 +27,7 @@
 }
 @layer base {
   body {
+    width: 100vw;
     font-family: 'Unbounded';
     /* background-color: #352f44; */
     background-color: #f1eaea;

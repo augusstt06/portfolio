@@ -92,7 +92,7 @@ export function Carousel(props: Props) {
               }}
             >
               <div
-                className={`bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[var(--main-color)] grid md:grid-cols-2 md:grid-rows-1 grid-rows-3 korean-font`}
+                className={`hidden lg:grid bg-[#2e2e2e] w-full h-full rounded-lg border-4 border-[var(--main-color)]  md:grid-cols-2 lg:grid-rows-1 grid-rows-3 korean-font`}
               >
                 <div className="md:col-span-1 row-span-1">
                   <img

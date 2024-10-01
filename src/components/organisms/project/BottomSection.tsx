@@ -239,7 +239,7 @@ export default function BottomSection(props: Props) {
 
   return (
     <article
-      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative row-span-3 simple-transition`}
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} relative row-span-3 simple-transition bg-indigo-200 flex flex-row lg:inline-block`}
     >
       <Carousel
         cards={cards}
