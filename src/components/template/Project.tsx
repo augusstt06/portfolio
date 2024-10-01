@@ -10,7 +10,10 @@ export default function Project() {
   const [isTopSectionEnd, setIsTopSectionEnd] = useState<boolean>(false)
 
   return (
-    <section id={PROJECT} className="h-screen pt-20 grid grid-rows-4">
+    <section
+      id={PROJECT}
+      className="bg-blue-800 h-screen pt-20 grid grid-rows-4"
+    >
       <TopSection setIsTopSectionEnd={setIsTopSectionEnd} />
       <BottomSection isTopSectionEnd={isTopSectionEnd} />
     </section>

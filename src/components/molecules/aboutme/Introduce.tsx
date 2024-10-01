@@ -1,9 +1,3 @@
-import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
-import { SiGitbook } from 'react-icons/si'
-
-import { BLOG, GIT } from '@/constant'
-
 export default function Introduce() {
   const paragraphs = [
     {
@@ -50,26 +44,12 @@ export default function Introduce() {
     },
   ]
 
-  const archivings = [
-    { title: 'Git', url: GIT, icon: <FaGithub /> },
-    { title: 'Blog', url: BLOG, icon: <SiGitbook /> },
-  ]
   return (
-    <article className="w-screen h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative">
-      <div className="xl:top-12 md:top-12 md:left-20 lg:left-4 xl:left-24 xxl:left-[25rem]  top-12 absolute text-left korean-font w-full">
+    <article className="w-screen md:h-40 lg:h-auto lg:col-span-2 rounded-lg p-3 text-2xl transition-all duration-[1.5s] ease-in-out space-y-3 relative bg-orange-400 h-full">
+      <div className="h-full xl:top-12 md:top-12 md:left-20 lg:left-4 xl:left-24 xxl:left-[25rem] top-12  md:absolute pl-8 pr-8 md:pl-0 md:-r-0 text-left korean-font w-full overflow-scroll">
         {paragraphs.map((data) => (
           <div key={data.key}>{data.content}</div>
         ))}
-        <div className="w-auto mt-4 row-flex space-x-4">
-          {archivings.map((data) => (
-            <Link href={data.url} key={data.title}>
-              <div className="border-2 border-[#2e2e2e] w-24 place-content-center place-items-center grid grid-cols-3 rounded-lg px-1 hover:text-[#fff] simple-transition cursor-pointer hover:bg-[var(--main-color)]">
-                <div className="col-span-1">{data.icon}</div>
-                <p className="text-md col-span-2">{data.title}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
       </div>
     </article>
   )

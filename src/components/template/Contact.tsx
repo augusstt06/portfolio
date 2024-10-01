@@ -25,7 +25,10 @@ export default function Contact() {
   }, [])
 
   return (
-    <section id={CONTACT} className="relative grid h-screen grid-rows-4 pt-20">
+    <section
+      id={CONTACT}
+      className="bg-indigo-800 relative grid h-screen grid-rows-4 pt-20"
+    >
       <article className="left-1/2 top-1/3 absolute h-2/3 -translate-x-1/2 space-y-12">
         <FadeInText
           text="develop and grow passionately"
