@@ -25,6 +25,16 @@
   src: url('../../public/fonts/DoHyeon.ttf') format('truetype');
   font-weight: 900;
 }
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../../public/fonts/NanumGothic.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'NanumGothic-Regular';
+  src: url('../../public/fonts/NanumGothic-Regular.ttf') format('truetype');
+  font-weight: 900;
+}
 @layer base {
   body {
     width: 100vw;
@@ -35,9 +45,12 @@
   }
 }
 @layer utilities {
-  .korean-font {
+  .korean-bold-font {
     /* font-family: 'Jua-Regular'; */
-    font-family: 'DoHyeon';
+    font-family: 'NanumGothic';
+  }
+  .korean-font {
+    font-family: 'NanumGothic-Regular';
   }
   .grid-center {
     @apply place-content-center place-items-center;
