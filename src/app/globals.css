@@ -30,7 +30,8 @@
     width: 100vw;
     font-family: 'Unbounded';
     /* background-color: #352f44; */
-    background-color: #f1eaea;
+    /* background-color: #f1eaea; */
+    background-color: #fff;
   }
 }
 @layer utilities {

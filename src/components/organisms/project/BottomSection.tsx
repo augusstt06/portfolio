@@ -247,7 +247,7 @@ export default function BottomSection(props: Props) {
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
       />
-      <div className="w-full md:hidden grid grid-cols-3 gap-5 pr-3 pl-3">
+      <div className="w-full grid grid-cols-3 gap-5 pr-3 pl-3">
         {cards.map((data) => (
           <Card key={data.url} />
         ))}
