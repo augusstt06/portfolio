@@ -58,7 +58,7 @@ export default function Skills() {
 
   return (
     <article className="relative h-auto lg:col-span-1 row-span-1 korean-font">
-      <div className="item-start lg:absolute lg:top-12 lg:left-24 xl:left-40 xxl:left-[30rem] lg:inline lg:space-y-16 row-flex justify-around">
+      <div className="item-start lg:absolute lg:top-12 left-8 lg:left-26 xl:left-24 xxl:left-[30rem] lg:inline lg:space-y-16 row-flex justify-around">
         {badges.map((badge) => (
           <SkillBox
             key={badge.title}
