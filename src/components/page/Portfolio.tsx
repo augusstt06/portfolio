@@ -1,10 +1,10 @@
 'use client'
 import { Element } from 'react-scroll'
 
-import { ABOUTME, PROJECT } from '@/constant'
+import { ABOUTME, CONTACT, PROJECT } from '@/constant'
 
 import AboutMe from '@/components/template/AboutMe'
-// import Contact from '@/components/template/Contact'
+import Contact from '@/components/template/Contact'
 import Project from '@/components/template/Project'
 
 export default function Portfoilo() {
@@ -17,9 +17,9 @@ export default function Portfoilo() {
       <Element name={PROJECT}>
         <Project />
       </Element>
-      {/* <Element name={CONTACT}>
+      <Element name={CONTACT}>
         <Contact />
-      </Element> */}
+      </Element>
     </section>
   )
 }

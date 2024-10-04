@@ -26,7 +26,7 @@ export default function TypingText(props: Props) {
       const timeout = setTimeout(() => {
         setMainText(typingText.slice(0, count + 1))
         setCount((prevCount) => prevCount + 1)
-      }, 170)
+      }, 100)
 
       return () => {
         clearTimeout(timeout)
