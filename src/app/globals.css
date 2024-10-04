@@ -25,17 +25,32 @@
   src: url('../../public/fonts/DoHyeon.ttf') format('truetype');
   font-weight: 900;
 }
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../../public/fonts/NanumGothic.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'NanumGothic-Regular';
+  src: url('../../public/fonts/NanumGothic-Regular.ttf') format('truetype');
+  font-weight: 900;
+}
 @layer base {
   body {
+    width: 100vw;
     font-family: 'Unbounded';
     /* background-color: #352f44; */
-    background-color: #f1eaea;
+    /* background-color: #f1eaea; */
+    background-color: #fff;
   }
 }
 @layer utilities {
-  .korean-font {
+  .korean-bold-font {
     /* font-family: 'Jua-Regular'; */
-    font-family: 'DoHyeon';
+    font-family: 'NanumGothic';
+  }
+  .korean-font {
+    font-family: 'NanumGothic-Regular';
   }
   .grid-center {
     @apply place-content-center place-items-center;
@@ -56,7 +71,7 @@
 
   /* animate */
   .container {
-    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#f1eaea];
+    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#fff];
   }
 
   .main {
@@ -70,7 +85,7 @@
   }
 
   .slitOneFront {
-    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#f1eaea];
+    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#fff];
   }
 
   .slitOneBack {
@@ -81,12 +96,12 @@
   }
 
   .slitTwo {
-    @apply absolute top-44 -left-[250px] md:-left-[100px] z-[11] w-[300px] lg:w-[20rem] h-[400px] lg:-left-10 lg:top-40  md:top-28 hidden md:block;
+    @apply absolute top-44 -left-[250px] md:-left-[100px] z-[11] w-[300px] lg:w-[20rem] h-[450px] lg:-left-10 lg:top-40  md:top-28 hidden md:block;
     transform: skewX(-10deg);
   }
 
   .slitTwoFront {
-    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#f1eaea];
+    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#fff];
   }
 
   .slitTwoBack {
@@ -103,7 +118,7 @@
   }
 
   .textCubeWord {
-    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em] hidden md:block;
+    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#fff] p-[0.3em] hidden md:block;
     transform-style: preserve-3d;
     transform-origin: top center;
     transform: rotateX(calc(98deg * var(--i)));

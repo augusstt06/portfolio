@@ -26,7 +26,7 @@ export default function TypingText(props: Props) {
       const timeout = setTimeout(() => {
         setMainText(typingText.slice(0, count + 1))
         setCount((prevCount) => prevCount + 1)
-      }, 170)
+      }, 100)
 
       return () => {
         clearTimeout(timeout)
@@ -98,7 +98,7 @@ export default function TypingText(props: Props) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <div className="invisible">{text}</div>
       <div className="absolute top-0 left-0">
         {renderText()}

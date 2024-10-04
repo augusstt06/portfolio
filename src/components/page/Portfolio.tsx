@@ -9,7 +9,7 @@ import Project from '@/components/template/Project'
 
 export default function Portfoilo() {
   return (
-    <section>
+    <section className="w-[100vw]">
       <Element name={ABOUTME}>
         <AboutMe />
       </Element>

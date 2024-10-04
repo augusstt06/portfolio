@@ -21,7 +21,7 @@ const Home: React.FC = () => {
 
   return (
     // <main className="bg-[url('/bg.jpg')] bg-no-repeat bg-center bg-cover h-[100vh] w-[100vw]">
-    <main className="min-h-screen">
+    <main className="min-h-screen w-full">
       <Main />
     </main>
     // </main>

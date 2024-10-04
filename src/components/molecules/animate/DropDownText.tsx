@@ -45,16 +45,18 @@ export default function DropDownText() {
     <article className="justify-center w-3/4 col-flex abs-center space-y-8 block md:hidden">
       <div
         ref={headParagraphRef}
-        className="mx-auto text-2xl leading-tight text-center text-black cursor-pointer"
+        className="mx-auto leading-tight text-center text-black cursor-pointer"
       >
-        <h1 className="w-full mb-6 text-5xl">Hi I&apos;m ChungYeon Kim</h1>
-        <small className="text-4xl text-[var(--main-color)]">
+        <h1 className="w-full mb-6 text-3xl md:text-5xl">
+          Hi I&apos;m ChungYeon Kim
+        </h1>
+        <small className="text-2xl md:text-4xl text-[var(--main-color)]">
           Frontend Developer
         </small>
       </div>
       <p
         ref={subParagraphRef}
-        className="group text-center text-[#2e2e2e] text-lg opacity-0 mt-4 cursor-pointer hover:text-[var(--main-color)] simple-transition relative px-6 py-2"
+        className="group text-center text-[#2e2e2e] text-sm md:text-lg opacity-0 mt-4 cursor-pointer hover:text-[var(--main-color)] simple-transition relative px-6 py-2"
         onClick={clickHandler}
       >
         Click to continue Viewing the Portfolio
