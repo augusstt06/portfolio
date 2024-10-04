@@ -242,21 +242,25 @@ export default function BottomSection(props: Props) {
       url: '',
       title: 'Mega Earn',
       description: 'React를 사용한 블록체인 웹 서비스 개발',
+      skills: ['React', 'Zustand'],
     },
     {
       url: GIT_PORTFOLIO,
       title: 'Portfolio',
       description: 'Next.js를 사용한 개인 포트폴리오 사이트 개발',
+      skills: ['Next.js', 'GSAP'],
     },
     {
       url: '',
       title: 'Groupware',
       description: 'Next.js를 사용한 그룹웨어 서비스 개발',
+      skills: ['Next.js', 'Redux'],
     },
     {
       url: GIT_WEATHER,
       title: 'Weather AI',
       description: 'Next.js를 사용한 날씨 + AI 어플리케이션',
+      skills: ['Next.js', 'Zustand', 'OpenAI'],
     },
   ]
 
@@ -269,13 +273,14 @@ export default function BottomSection(props: Props) {
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
       />
-      <div className="w-full md:hidden grid grid-cols-3 gap-5 pr-3 pl-3">
+      <div className="w-full md:hidden grid grid-cols-2 sm:grid-cols-3 gap-5 pr-3 pl-3">
         {summaryCards.map((data) => (
           <Card
             key={data.url}
             title={data.title}
             url={data.url}
             description={data.description}
+            skills={data.skills}
           />
         ))}
       </div>

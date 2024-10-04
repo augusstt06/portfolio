@@ -71,7 +71,7 @@
 
   /* animate */
   .container {
-    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#f1eaea];
+    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#fff];
   }
 
   .main {
@@ -85,7 +85,7 @@
   }
 
   .slitOneFront {
-    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#f1eaea];
+    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#fff];
   }
 
   .slitOneBack {
@@ -101,7 +101,7 @@
   }
 
   .slitTwoFront {
-    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#f1eaea];
+    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#fff];
   }
 
   .slitTwoBack {
@@ -118,7 +118,7 @@
   }
 
   .textCubeWord {
-    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#f1eaea] p-[0.3em] hidden md:block;
+    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#fff] p-[0.3em] hidden md:block;
     transform-style: preserve-3d;
     transform-origin: top center;
     transform: rotateX(calc(98deg * var(--i)));
