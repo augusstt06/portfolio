@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { FaGithub } from 'react-icons/fa'
 
-import { GIT_PORTFOLIO, GIT_WEATHER } from '@/constant'
+import { GIT_GROUPWARE, GIT_PORTFOLIO, GIT_WEATHER } from '@/constant'
 
 import Badge from '@/components/atom/badge/Badge'
 // import DownArrow from '@/components/molecules/arrow/DownArrow'
@@ -251,7 +251,7 @@ export default function BottomSection(props: Props) {
       skills: ['Next.js', 'GSAP'],
     },
     {
-      url: '',
+      url: GIT_GROUPWARE,
       title: 'Groupware',
       description: 'Next.js를 사용한 그룹웨어 서비스 개발',
       skills: ['Next.js', 'Redux'],
