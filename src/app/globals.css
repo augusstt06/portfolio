@@ -101,7 +101,7 @@
   }
 
   .slitTwoFront {
-    @apply absolute top-12 left-0 z-[5] w-full h-full bg-[#fff];
+    @apply absolute top-[0.2] left-0 z-[5] w-full h-full bg-[#fff];
   }
 
   .slitTwoBack {

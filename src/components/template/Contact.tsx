@@ -26,16 +26,16 @@ export default function Contact() {
 
   return (
     <section id={CONTACT} className="relative grid h-screen grid-rows-4 pt-20">
-      <article className="left-1/2 top-1/3 absolute h-2/3 -translate-x-1/2 space-y-12">
+      <article className="left-1/2 top-1/3 absolute h-2/3 -translate-x-1/2 space-y-12 w-full col-flex justify-center">
         <FadeInText
           text="develop and grow passionately"
-          className=" text-5xl text-center text-[var(--main-color)] uppercase"
+          className="text-3xl md:text-5xl text-center text-[var(--main-color)] uppercase md:w-2/3"
           onAnimationEnd={handleAnimationEnd}
           onResetState={handleResetAnimation}
         />
 
         <div
-          className={`${isAnimationEnd ? 'opacity-100' : 'opacity-0'} text-black col-flex justify-around w-[40rem] mx-auto simple-transition space-y-6`}
+          className={`${isAnimationEnd ? 'opacity-100' : 'opacity-0'} text-black col-flex justify-around mx-auto simple-transition space-y-6 bg-blue-100`}
         >
           <div className="row-flex justify-center w-full gap-16">
             <Link href={GIT}>
