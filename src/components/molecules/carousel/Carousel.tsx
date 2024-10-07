@@ -16,10 +16,11 @@ type Props = {
   cards: Card[]
   currentIndex: number
   setCurrentIndex: Dispatch<SetStateAction<number>>
+  isTopSectionEnd: boolean
 }
 
 export function Carousel(props: Props) {
-  const { cards, currentIndex, setCurrentIndex } = props
+  const { cards, currentIndex, setCurrentIndex, isTopSectionEnd } = props
 
   const carouselRef = useRef<HTMLDivElement>(null)
 
@@ -62,7 +63,9 @@ export function Carousel(props: Props) {
   }, [currentIndex])
 
   return (
-    <div className="w-2/3 md:w-[70rem] h-[40rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+    <div
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} w-2/3 md:w-[70rem] h-[40rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2`}
+    >
       <div
         ref={carouselRef}
         className="relative w-full h-full cursor-pointer perspective-800"
