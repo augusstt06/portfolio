@@ -1,8 +1,5 @@
-// import { PROJECT } from '@/constant'
-
 import Introduce from '@/components/molecules/aboutme/Introduce'
 import Skills from '@/components/molecules/aboutme/Skills'
-// import DownArrow from '@/components/molecules/arrow/DownArrow'
 
 type Props = {
   isTopSectionEnd: boolean
@@ -17,7 +14,6 @@ export default function BottomSection(props: Props) {
     >
       <Skills />
       <Introduce />
-      {/* <DownArrow next={PROJECT} scrollY={0} /> */}
     </article>
   )
 }

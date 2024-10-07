@@ -18,7 +18,6 @@ export default function TopSection(props: Props) {
           highlightClass={`text-[var(--main-color)] font-extrabold uppercase border-b-8 border-[var(--main-color)]`}
         />
       </div>
-      {/* <div className="absolute left-1/2 -translate-x-1/2">dd</div> */}
       <div className="md:hidden w-full h-full col-flex justify-center items-center text-4xl text-center text-[#2e2e2e] uppercase space-y-4">
         <p>
           A Steadily{' '}

@@ -35,7 +35,7 @@ export default function Contact() {
         />
 
         <div
-          className={`${isAnimationEnd ? 'opacity-100' : 'opacity-0'} text-black col-flex justify-around mx-auto simple-transition space-y-6 bg-blue-100`}
+          className={`${isAnimationEnd ? 'opacity-100' : 'opacity-0'} text-black col-flex justify-around mx-auto simple-transition space-y-6`}
         >
           <div className="row-flex justify-center w-full gap-16">
             <Link href={GIT}>

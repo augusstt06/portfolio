@@ -64,7 +64,7 @@ export function Carousel(props: Props) {
 
   return (
     <div
-      className={`${isTopSectionEnd ? '' : 'opacity-0'} w-2/3 md:w-[70rem] h-[40rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2`}
+      className={`${isTopSectionEnd ? '' : 'opacity-0'} w-2/3 md:w-[70rem] h-[40rem] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 simple-transition`}
     >
       <div
         ref={carouselRef}
