@@ -28,6 +28,12 @@ export default function Main() {
       >
         <p>Click to Viewing the Portfolio</p>
       </button> */}
+      <div className="relative inline-block top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute inset-0 animate-pulse bg-white/50 rounded-lg"></div>
+        <button className="relative border-2 border-white bg-black px-4 py-2 rounded-md">
+          Continue
+        </button>
+      </div>
     </section>
   )
 }
