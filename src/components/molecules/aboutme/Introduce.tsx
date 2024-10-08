@@ -33,12 +33,7 @@ export default function Introduce() {
     },
     {
       key: 'description3',
-      content: (
-        <p>
-          또한 타 분야 개발자들과 자료구조, CS 등에 대한 스터디 및 프로젝트를
-          진행한 경험으로 원활한 협업이 가능합니다.
-        </p>
-      ),
+      content: <p></p>,
     },
   ]
 
