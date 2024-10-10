@@ -6,7 +6,7 @@ import Main from '@/components/template/Main'
 
 const Home: React.FC = () => {
   return (
-    <main className="min-h-screen w-full">
+    <main className="min-h-screen w-full text-white">
       <Main />
     </main>
   )

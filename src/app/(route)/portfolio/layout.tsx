@@ -8,7 +8,7 @@ export default function PortfolioLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen text-white">
       <Nav />
       {children}
     </div>
