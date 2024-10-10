@@ -57,11 +57,11 @@ export default function DropDownText() {
         className="relative inline-block text-center cursor-pointer"
         onClick={clickHandler}
       >
-        <button className="relative border-2 border-white bg-black px-4 py-2 rounded-md">
+        <button className="relative border-2 border-white bg-[#d4d0b4] px-4 py-2 rounded-md">
           Click to continue Viewing the Portfolio
         </button>
 
-        <div className="absolute inset-0 animate-pulse bg-white/50 rounded-lg"></div>
+        <div className="absolute inset-0 animate-pulse bg-transparent rounded-lg"></div>
       </div>
     </article>
   )
