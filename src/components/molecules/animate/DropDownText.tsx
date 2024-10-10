@@ -1,8 +1,6 @@
-import { useEffect, useRef } from 'react'
-
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation' // next/navigation으로 유지
 
 import {
   addExitAnimation,
@@ -10,14 +8,22 @@ import {
   animateSubParagraph,
   wrapTextInSpan,
 } from '@/utils/animation/drop-down'
+import Loader from '@/components/atom/animate/Loader'
 
 export default function DropDownText() {
   const router = useRouter()
-  const clickHandler = () => {
-    router.push('/portfolio')
-  }
+
+  // 페이지 전환 중일 때 fallback 화면을 보여주기 위한 상태
+  const [isNavigating, setIsNavigating] = useState(false)
+
   const headParagraphRef = useRef<HTMLParagraphElement>(null)
   const subParagraphRef = useRef<HTMLDivElement>(null)
+
+  const clickHandler = () => {
+    setIsNavigating(true)
+
+    router.push('/portfolio')
+  }
 
   useEffect(() => {
     if (!headParagraphRef.current || !subParagraphRef.current) return
@@ -41,11 +47,15 @@ export default function DropDownText() {
     }
   }, [])
 
+  if (isNavigating) {
+    return <Loader />
+  }
+
   return (
-    <article className="w-3/4 abs-center space-y-12 col-flex ">
+    <article className="w-3/4 abs-center space-y-12 col-flex">
       <div
         ref={headParagraphRef}
-        className="mx-auto leading-tight text-center  cursor-pointer"
+        className="mx-auto leading-tight text-center cursor-pointer"
       >
         <h1 className="w-full mb-6 text-3xl md:text-5xl">
           Hi I&apos;m ChungYeon Kim
@@ -57,11 +67,11 @@ export default function DropDownText() {
         className="relative inline-block text-center cursor-pointer"
         onClick={clickHandler}
       >
-        <button className="relative border-2 border-white bg-[#d4d0b4] px-4 py-2 rounded-md">
+        <button className="relative bg-[#f7f7f3] px-4 py-2 rounded-md text-[#2b2f4b]">
           Viewing the Portfolio
         </button>
 
-        <div className="absolute inset-0 animate-pulse bg-transparent rounded-lg"></div>
+        <div className="absolute inset-0 animate-pulse rounded-lg"></div>
       </div>
     </article>
   )

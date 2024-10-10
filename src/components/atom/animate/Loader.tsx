@@ -33,7 +33,7 @@ export default function Loading() {
   }, [])
 
   return (
-    <div className="flex items-center justify-center h-screen bg-black">
+    <div className="flex items-center justify-center h-screen ">
       <div className="circle inner w-16 h-16 border-2 border-white rounded-full absolute opacity-0"></div>
       <div className="circle outer w-24 h-24 border-2 border-white rounded-full relative opacity-0"></div>
     </div>
