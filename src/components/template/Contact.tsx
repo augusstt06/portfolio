@@ -39,9 +39,9 @@ export default function Contact() {
       />
 
       <div
-        className={`${isAnimationEnd ? 'opacity-100' : 'opacity-0'} text-black col-flex justify-around mx-auto simple-transition space-y-6`}
+        className={`${isAnimationEnd ? 'opacity-100' : 'opacity-0'} col-flex justify-around mx-auto simple-transition space-y-6`}
       >
-        <div className="row-flex justify-center w-full gap-16">
+        <div className="row-flex justify-center w-full gap-16 ">
           <Link href={GIT}>
             <FaGithubSquare className="w-20 h-20 hover:scale-[1.2] simple-transition cursor-pointer" />
           </Link>

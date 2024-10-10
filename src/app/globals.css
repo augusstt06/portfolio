@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --main-color: #0078ff;
-  --text-color: #539bec;
+  --main-color: #b2ad87;
+  --text-color: #f1eaea;
 }
 @font-face {
   font-family: 'Unbounded';
