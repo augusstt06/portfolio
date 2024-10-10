@@ -17,7 +17,7 @@ export default function DropDownText() {
     router.push('/portfolio')
   }
   const headParagraphRef = useRef<HTMLParagraphElement>(null)
-  const subParagraphRef = useRef<HTMLParagraphElement>(null)
+  const subParagraphRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!headParagraphRef.current || !subParagraphRef.current) return
@@ -42,26 +42,27 @@ export default function DropDownText() {
   }, [])
 
   return (
-    <article className="justify-center w-3/4 col-flex abs-center space-y-8 block md:hidden">
+    <article className="w-3/4 abs-center space-y-12 col-flex ">
       <div
         ref={headParagraphRef}
-        className="mx-auto leading-tight text-center text-black cursor-pointer"
+        className="mx-auto leading-tight text-center  cursor-pointer"
       >
         <h1 className="w-full mb-6 text-3xl md:text-5xl">
           Hi I&apos;m ChungYeon Kim
         </h1>
-        <small className="text-2xl md:text-4xl text-[var(--main-color)]">
-          Frontend Developer
-        </small>
+        <small className="text-2xl md:text-4xl">Frontend Developer</small>
       </div>
-      <p
+      <div
         ref={subParagraphRef}
-        className="group text-center text-[#2e2e2e] text-sm md:text-lg opacity-0 mt-4 cursor-pointer hover:text-[var(--main-color)] simple-transition relative px-6 py-2"
+        className="relative inline-block text-center cursor-pointer"
         onClick={clickHandler}
       >
-        Click to continue Viewing the Portfolio
-        <span className="absolute inset-0 border-2 border-[var(--main-color)] transition-all duration-700 transform scale-x-0 origin-left group-hover:scale-x-100 pointer-events-none z-[-1] rounded-xl" />
-      </p>
+        <button className="relative border-2 border-white bg-black px-4 py-2 rounded-md">
+          Click to continue Viewing the Portfolio
+        </button>
+
+        <div className="absolute inset-0 animate-pulse bg-white/50 rounded-lg"></div>
+      </div>
     </article>
   )
 }

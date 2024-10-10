@@ -69,13 +69,17 @@
     @apply flex flex-row items-center;
   }
 
+  /* text */
+  .word {
+    display: inline-block;
+  }
   /* animate */
   .container {
     @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#fff];
   }
 
   .main {
-    @apply w-screen h-screen relative overflow-hidden;
+    @apply w-screen h-screen relative overflow-hidden col-flex justify-center;
     perspective: 5000px;
   }
 
