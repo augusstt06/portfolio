@@ -280,8 +280,6 @@ export default function BottomSection(props: Props) {
           />
         ))}
       </div>
-
-      {/* <DownArrow next={CONTACT} scrollY={958} /> */}
     </article>
   )
 }

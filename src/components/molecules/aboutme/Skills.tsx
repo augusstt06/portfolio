@@ -34,7 +34,7 @@ export default function Skills() {
   ]
 
   return (
-    <article className="h-auto lg:col-span-1 row-span-1 korean-font row-flex justify-center w-2/3">
+    <article className="h-auto lg:col-span-1 row-span-1 korean-font row-flex justify-center w-full md:w-2/3">
       <div className=" flex flex-row justify-between items-center w-full h-2/3 lg:space-x-0 space-x-3">
         {badges.map((badge) => (
           <SkillBox
