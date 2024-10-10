@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --main-color: #0078ff;
-  --text-color: #539bec;
+  --main-color: #b2ad87;
+  --text-color: #f1eaea;
 }
 @font-face {
   font-family: 'Unbounded';
@@ -41,7 +41,7 @@
     font-family: 'Unbounded';
     /* background-color: #352f44; */
     /* background-color: #f1eaea; */
-    background-color: #fff;
+    background-color: #1f212c;
   }
 }
 @layer utilities {
@@ -69,62 +69,15 @@
     @apply flex flex-row items-center;
   }
 
-  /* animate */
-  .container {
-    @apply min-h-screen font-['Raleway'] grid place-items-center bg-[#fff];
+  /* text */
+  .word {
+    display: inline-block;
   }
-
-  .main {
-    @apply w-screen h-screen relative overflow-hidden;
-    perspective: 5000px;
+  .circle {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
   }
-
-  .slitOne {
-    @apply absolute bottom-0 -right-[350px] z-10 w-[500px] h-[400px] hidden md:block;
-    transform: skewX(-10deg);
-  }
-
-  .slitOneFront {
-    @apply absolute top-0 left-0 z-[3] w-full h-full bg-[#fff];
-  }
-
-  .slitOneBack {
-    @apply absolute top-1/2 -left-[30px] z-[2] w-[100px] h-[120%];
-    transform: translateY(-50%);
-    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent 60%);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  .slitTwo {
-    @apply absolute top-44 -left-[250px] md:-left-[100px] z-[11] w-[300px] lg:w-[20rem] h-[450px] lg:-left-10 lg:top-40  md:top-28 hidden md:block;
-    transform: skewX(-10deg);
-  }
-
-  .slitTwoFront {
-    @apply absolute top-[0.2] left-0 z-[5] w-full h-full bg-[#fff];
-  }
-
-  .slitTwoBack {
-    @apply absolute top-1/2 -right-[30px] z-[4] w-[100px] h-[120%];
-    transform: translateY(-50%);
-    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent 60%);
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  }
-
-  .textCube {
-    @apply absolute top-1/2 left-1/2 z-[1] w-[700px] block;
-    transform: translate(-50%, -50%);
-    transform-style: preserve-3d;
-  }
-
-  .textCubeWord {
-    @apply absolute top-0 left-0 w-full h-max text-center text-[5rem] font-extrabold bg-[#fff] p-[0.3em] hidden md:block;
-    transform-style: preserve-3d;
-    transform-origin: top center;
-    transform: rotateX(calc(98deg * var(--i)));
-    backface-visibility: hidden;
-  }
-
   @media (max-width: 768px) {
     .text {
       font-size: 1.8rem;

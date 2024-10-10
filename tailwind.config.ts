@@ -25,11 +25,20 @@ const config: Config = {
       },
       animation: {
         blink: 'blink 2s step-end infinite',
+        pulse: 'pulse 3s infinite',
       },
       keyframes: {
         blink: {
           '0%, 50%, 100%': { opacity: '1' },
           '25%, 75%': { opacity: '0' },
+        },
+        pulse: {
+          '0%, 100% ': { opacity: '0' },
+          '15%, 45%': { opacity: '1' },
+          '60%': {
+            boxShadow: '0 0 0 30px rgba(255, 255, 255, 0.1)',
+            opacity: '0',
+          },
         },
       },
     },

@@ -9,35 +9,33 @@ export default function Skills() {
     {
       title: 'Typescript',
       color: '#3178c6',
-      icon: <SiTypescript className="w-6 h-6 text-white" />,
+      icon: <SiTypescript className="w-4 h-4 text-white" />,
     },
     {
       title: 'React',
       color: '#33bee3',
-      icon: <SiReact className="w-6 h-6 text-white" />,
+      icon: <SiReact className="w-4 h-4 text-white" />,
     },
     {
       title: 'Next.js',
       color: '#2e2e2e',
-      icon: <SiNextdotjs className="w-6 h-6 text-white" />,
+      icon: <SiNextdotjs className="w-4 h-4 text-white" />,
     },
     {
       title: 'Redux',
       color: '#764ABC',
-      icon: <TbBrandRedux className="w-6 h-6 text-white" />,
+      icon: <TbBrandRedux className="w-4 h-4 text-white" />,
     },
     {
       title: 'AWS',
       color: '#232F3E',
-      icon: <FaAws className="w-6 h-6 text-white" />,
+      icon: <FaAws className="w-4 h-4 text-white" />,
     },
   ]
 
   return (
-    // <article className="relative h-auto lg:col-span-1 row-span-1 korean-font bg-indigo-300">
-    <article className="relative h-auto lg:col-span-1 row-span-1 korean-font col-flex justify-center">
-      {/* <div className="item-start lg:absolute lg:top-12 left-8 lg:left-26 xl:left-24 xxl:left-[30rem] lg:inline lg:space-y-16 row-flex justify-around"> */}
-      <div className=" flex flex-row lg:flex-col justify-between items-center w-full h-2/3 lg:space-x-0 space-x-3">
+    <article className="h-auto lg:col-span-1 row-span-1 korean-font row-flex justify-center w-2/3">
+      <div className=" flex flex-row justify-between items-center w-full h-2/3 lg:space-x-0 space-x-3">
         {badges.map((badge) => (
           <SkillBox
             key={badge.title}
