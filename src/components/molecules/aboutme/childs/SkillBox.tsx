@@ -9,11 +9,11 @@ export default function SkillBox(props: Props) {
 
   return (
     <div
-      className={`text-[#fff] hover:scale-[1.1]  simple-transition col-flex justify-center md:grid max-w-2/3 max-h-2/3 w-60 h-12 md:grid-cols-4 px-4 py-2 text-center text-lg rounded-lg cursor-pointer`}
+      className={`text-[#fff] row-flex justify-center max-w-2/3 max-h-2/3 w-28 h-8 text-sm rounded-lg gap-4`}
       style={{ backgroundColor: color }}
     >
-      <div className="hidden md:block col-span-1">{icon}</div>
-      <div className="col-span-3">{title}</div>
+      <div className="hidden md:block ">{icon}</div>
+      <span>{title}</span>
     </div>
   )
 }

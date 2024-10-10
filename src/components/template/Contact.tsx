@@ -29,8 +29,6 @@ export default function Contact() {
       id={CONTACT}
       className="h-screen col-flex justify-center space-y-10"
     >
-      {/* <article className="left-1/2 top-1/3 absolute h-2/3 -translate-x-1/2 space-y-12 w-full col-flex justify-center bg-red-100"> */}
-
       <FadeInText
         text="develop and grow passionately"
         className="text-3xl md:text-5xl text-center text-[var(--main-color)] uppercase md:w-2/3"
@@ -56,7 +54,6 @@ export default function Contact() {
           <p className="text-xs">Copyright 2024 ChungYeonKim</p>
         </div>
       </div>
-      {/* </article> */}
     </section>
   )
 }
