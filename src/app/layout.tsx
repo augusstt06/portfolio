@@ -1,8 +1,9 @@
-'use client'
-
-import { ThemeProvider } from 'next-themes'
-
 import './globals.css'
+
+export const metadata = {
+  title: 'ChungYeonKim | portfolio',
+  description: '안녕하세요 프론트엔드 개발자 김충연입니다.',
+}
 
 export default function RootLayout({
   children,
@@ -11,9 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
