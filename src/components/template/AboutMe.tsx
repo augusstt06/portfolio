@@ -10,7 +10,6 @@ export default function AboutMe() {
   const [isTopSectionEnd, setIsTopSectionEnd] = useState<boolean>(false)
 
   return (
-    // FIXME: top-padding 조정하기
     <section id={ABOUTME} className="h-screen w-full pt-12 grid grid-rows-3">
       <TopSection setIsTopSectionEnd={setIsTopSectionEnd} />
       <BottomSection isTopSectionEnd={isTopSectionEnd} />
