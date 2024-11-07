@@ -9,7 +9,7 @@
 
 ## Domain
 
-https://portfolio-augg.vercel.app/
+https://main.d3omr36cxuhrlj.amplifyapp.com/
 
 ## Stacks
 
